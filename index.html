@@ -1,580 +1,1692 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>CRUSTAR CARE | From the First Doubt to the Entire Journey</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+content="CRUSTAR CARE helps people understand cancer, explore early-action guidance, organize their care journey, and find support. Created in memory of Er. Abdul Hai Khan.">
 
-    <title>CRUSTAR CARE | From the first doubt to the entire journey</title>
+<meta name="theme-color" content="#073b38">
 
-    <meta name="description"
-        content="CRUSTAR CARE provides cancer awareness, early-action guidance, health education, patient support and cancer care resources.">
+<style>
+:root {
+    --green: #073b38;
+    --green-dark: #042c2a;
+    --green-light: #eaf5f2;
+    --gold: #d4af37;
+    --gold-light: #f8edc5;
+    --white: #ffffff;
+    --text: #183b39;
+    --muted: #607572;
+    --border: #dce9e5;
+    --shadow: 0 14px 40px rgba(7, 59, 56, 0.09);
+    --radius: 22px;
+}
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 88px 0;
+}
+
+.section-light {
+    background: #f5faf8;
+}
+
+.section-dark {
+    background: var(--green);
+    color: var(--white);
+}
+
+.eyebrow {
+    color: #a68113;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.section-dark .eyebrow {
+    color: var(--gold);
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    color: var(--green);
+    font-size: clamp(29px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.section-dark .section-heading h2 {
+    color: var(--white);
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.section-dark .section-heading p {
+    color: #d1e3df;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 23px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform .2s, background .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--green-dark);
+}
+
+.btn-outline {
+    border-color: var(--border);
+    background: var(--white);
+    color: var(--green);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--green);
+}
+
+.btn-small {
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+/* HEADER */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.1;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    color: var(--green);
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -.5px;
+}
+
+.brand-name span {
+    color: var(--gold);
+}
+
+.brand-tagline {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.main-nav a {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.main-nav a:hover {
+    color: #a68113;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: var(--green-light);
+    color: var(--green);
+    border: 0;
+    border-radius: 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background:
+        radial-gradient(circle at 85% 15%, #d6eee8 0, transparent 35%),
+        linear-gradient(135deg, #f8fcfa, #eaf5f2);
+    padding: 88px 0 82px;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero h1 {
+    color: var(--green);
+    font-size: clamp(38px, 5.4vw, 67px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #116c64;
+}
+
+.hero-copy {
+    max-width: 650px;
+    font-size: 17px;
+    color: #526c68;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.hero-note {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.hero-panel {
+    position: relative;
+    background: var(--green);
+    color: var(--white);
+    padding: 36px;
+    border-radius: 30px;
+    box-shadow: 0 25px 65px rgba(7,59,56,.18);
+    overflow: hidden;
+}
+
+.hero-panel::after {
+    content: " ";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(212,175,55,.4);
+    border-radius: 50%;
+    right: -70px;
+    bottom: -85px;
+}
+
+.hero-panel .eyebrow {
+    color: var(--gold);
+}
+
+.hero-panel h2 {
+    font-size: 29px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero-panel p {
+    color: #d6e6e2;
+    margin-bottom: 23px;
+    font-size: 15px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* QUICK NAVIGATION */
+
+.quick-nav {
+    padding: 25px 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    text-align: center;
+    padding: 15px 10px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 800;
+    background: var(--white);
+    transition: .2s;
+}
+
+.quick-link:hover {
+    background: var(--green-light);
+    border-color: #b6d5cd;
+}
+
+/* FEATURE CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card-grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 27px;
+    box-shadow: 0 5px 20px rgba(7,59,56,.035);
+    min-width: 0;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    background: var(--green-light);
+    border-radius: 16px;
+    font-size: 25px;
+    margin-bottom: 19px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.card-link {
+    margin-top: auto;
+    color: #0b6b61;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.card-label {
+    display: inline-block;
+    background: var(--gold-light);
+    color: #70580c;
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+/* ARCHITECTURE OVERVIEW */
+
+.architecture-box {
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 30px;
+    background: var(--white);
+}
+
+.architecture-top {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.architecture-pillar {
+    background: #f5faf8;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 23px;
+}
+
+.architecture-pillar h3 {
+    color: var(--green);
+    font-size: 19px;
+    margin-bottom: 13px;
+}
+
+.architecture-pillar ul {
+    list-style: none;
+}
+
+.architecture-pillar li {
+    font-size: 14px;
+    padding: 7px 0;
+    border-bottom: 1px solid #e3eeea;
+}
+
+.architecture-pillar li:last-child {
+    border-bottom: 0;
+}
+
+.architecture-pillar a:hover {
+    color: #a68113;
+}
+
+.flow-connector {
+    width: 2px;
+    height: 28px;
+    background: var(--gold);
+    margin: 0 auto;
+}
+
+.flow-node {
+    background: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 24px;
+    border-radius: 18px;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.flow-node h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.flow-node p {
+    font-size: 14px;
+    color: #d1e3df;
+}
+
+.flow-node.gold-node {
+    background: var(--gold-light);
+    color: var(--green);
+}
+
+.flow-node.gold-node p {
+    color: var(--text);
+}
+
+.flow-node.community-node {
+    background: #eaf5f2;
+    color: var(--green);
+}
+
+.flow-node.community-node p {
+    color: var(--muted);
+}
+
+/* PATIENT JOURNEY */
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.journey-item {
+    padding: 24px 18px;
+    text-align: center;
+    border-radius: 18px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.journey-item .card-icon {
+    margin: 0 auto 13px;
+    background: rgba(255,255,255,.13);
+}
+
+.journey-item h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.journey-item p {
+    color: #d1e3df;
+    font-size: 13px;
+}
+
+/* SUPPORT BANNER */
+
+.support-banner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 30px;
+    background: var(--green-light);
+    border: 1px solid #d6e9e3;
+    border-radius: 25px;
+    padding: 36px;
+    margin-top: 30px;
+}
+
+.support-banner h3 {
+    color: var(--green);
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.support-banner p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* MEMORIAL */
+
+.memorial {
+    text-align: center;
+    padding: 88px 20px;
+    background:
+        radial-gradient(circle at center, #10564f 0, var(--green-dark) 72%);
+    color: var(--white);
+}
+
+.memorial-heart {
+    font-size: 37px;
+    margin-bottom: 16px;
+}
+
+.memorial .eyebrow {
+    color: var(--gold);
+}
+
+.memorial h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 15px;
+}
+
+.memorial-name {
+    color: var(--gold);
+    font-size: clamp(22px, 3vw, 31px);
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+.memorial p {
+    color: #d5e7e2;
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+.memorial-quote {
+    font-style: italic;
+    font-size: 17px;
+}
+
+/* DISCLAIMER AND FOOTER */
+
+.disclaimer {
+    padding: 27px 0;
+    background: #fff9e8;
+    border-top: 1px solid #f0e2b9;
+    border-bottom: 1px solid #f0e2b9;
+}
+
+.disclaimer strong {
+    color: #6c5611;
+}
+
+.disclaimer p {
+    color: #665f48;
+    font-size: 12px;
+}
+
+.site-footer {
+    background: #032522;
+    color: var(--white);
+    padding: 45px 0 22px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.footer-brand .brand-name {
+    color: var(--white);
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #c4d8d3;
+    font-size: 13px;
+    max-width: 340px;
+}
+
+.footer-column h3 {
+    color: var(--gold);
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.footer-column a {
+    display: block;
+    color: #d3e3df;
+    font-size: 13px;
+    margin: 9px 0;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #b7cec8;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .main-nav {
+        gap: 13px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 30px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .section {
+        padding: 62px 0;
+    }
+
+    .header-inner {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 18px 5% 25px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+        padding: 12px 0;
+        border-bottom: 1px solid #edf3f0;
+    }
+
+    .main-nav a:last-child {
+        border-bottom: 0;
+    }
+
+    .hero {
+        padding: 62px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 54px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-copy {
+        font-size: 15px;
+    }
+
+    .hero-panel {
+        padding: 27px;
+    }
+
+    .quick-nav-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .architecture-box {
+        padding: 17px;
+    }
+
+    .architecture-top {
+        grid-template-columns: 1fr;
+    }
+
+    .support-banner {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-panel h2 {
+        font-size: 25px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .card-grid,
+    .card-grid.two,
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 23px;
+    }
+
+    .quick-link {
+        font-size: 12px;
+        padding: 13px 7px;
+    }
+
+    .flow-node {
+        padding: 20px 13px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-
-    <header class="site-header">
-
-        <div class="container header-inner">
-
-            <a href="#" class="brand">
-
-                <span class="brand-main">CRUSTAR</span>
-                <span class="brand-care">CARE</span>
-
-            </a>
-
-            <nav class="main-nav">
-
-                <a href="#early-detection">Early Detection</a>
-                <a href="#cancer-library">Cancer Library</a>
-                <a href="#support">Get Support</a>
-                <a href="#about">About</a>
-
-            </nav>
-
-            <button class="menu-toggle" type="button">
-                ☰
-            </button>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <main>
-
-        <section class="hero-section">
-
-            <div class="container hero-content">
-
-                <div class="hero-text">
-
-                    <span class="eyebrow">
-                        CRUSTAR CANCER CARE
-                    </span>
-
-                    <h1>
-                        From the first doubt
-                        <span>to the entire journey.</span>
-                    </h1>
-
-                    <p>
-                        Understand cancer. Recognize important warning signs.
-                        Organize your care. Find support. Make informed decisions
-                        together with your healthcare team.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#early-detection" class="btn btn-primary">
-                            Check My Risk
-                        </a>
-
-                        <a href="#support" class="btn btn-secondary">
-                            Get Help
-                        </a>
-
-                    </div>
-
-                    <p class="hero-note">
-                        Information and support — not a substitute for medical care.
-                    </p>
-
-                </div>
-
-
-                <div class="hero-card">
-
-                    <span class="hero-card-label">
-                        YOUR NEXT STEP
-                    </span>
-
-                    <h2>
-                        What should I do next?
-                    </h2>
-
-                    <p>
-                        Start with your symptoms, risk factors, screening history
-                        or questions. We'll help you understand the next step.
-                    </p>
-
-                    <a href="#early-detection" class="hero-card-link">
-                        Start here →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             QUICK ACTIONS
-        ========================== -->
-
-        <section class="quick-actions">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        START HERE
-                    </span>
-
-                    <h2>
-                        Find the help you need
-                    </h2>
-
-                </div>
-
-
-                <div class="action-grid">
-
-                    <a href="#early-detection" class="action-card">
-
-                        <span class="action-icon">🔎</span>
-
-                        <h3>Check My Risk</h3>
-
-                        <p>
-                            Learn about warning signs, risk factors and when
-                            medical evaluation may be appropriate.
-                        </p>
-
-                        <span class="card-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#cancer-library" class="action-card">
-
-                        <span class="action-icon">📚</span>
-
-                        <h3>Understand Cancer</h3>
-
-                        <p>
-                            Explore cancer types, symptoms, diagnosis,
-                            treatment and supportive care.
-                        </p>
-
-                        <span class="card-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#reports" class="action-card">
-
-                        <span class="action-icon">📄</span>
-
-                        <h3>Understand Reports</h3>
-
-                        <p>
-                            Learn what common tests, reports and medical
-                            terminology mean.
-                        </p>
-
-                        <span class="card-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#support" class="action-card">
-
-                        <span class="action-icon">🤝</span>
-
-                        <h3>Get Support</h3>
-
-                        <p>
-                            Explore financial, hospital, oxygen and patient
-                            support resources.
-                        </p>
-
-                        <span class="card-arrow">→</span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             EARLY DETECTION
-        ========================== -->
-
-        <section id="early-detection" class="feature-section">
-
-            <div class="container feature-grid">
-
-                <div class="feature-content">
-
-                    <span class="eyebrow">
-                        EARLY ACTION
-                    </span>
-
-                    <h2>
-                        Don't ignore persistent changes.
-                    </h2>
-
-                    <p>
-                        Some symptoms can have many causes. When a change is
-                        persistent, unusual or concerning, knowing when to seek
-                        medical evaluation can make a difference.
-                    </p>
-
-                    <a href="#" class="text-link">
-                        Explore Early Detection →
-                    </a>
-
-                </div>
-
-
-                <div class="feature-panel">
-
-                    <div class="feature-item">
-
-                        <span>01</span>
-
-                        <div>
-                            <h3>Recognize</h3>
-                            <p>
-                                Understand important warning signs.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="feature-item">
-
-                        <span>02</span>
-
-                        <div>
-                            <h3>Assess</h3>
-                            <p>
-                                Consider risk factors and screening needs.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="feature-item">
-
-                        <span>03</span>
-
-                        <div>
-                            <h3>Act</h3>
-                            <p>
-                                Know when to discuss concerns with a clinician.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CANCER LIBRARY
-        ========================== -->
-
-        <section id="cancer-library" class="library-section">
-
-            <div class="container">
-
-                <div class="section-heading centered">
-
-                    <span class="eyebrow">
-                        CANCER LIBRARY
-                    </span>
-
-                    <h2>
-                        Understand. Don't guess.
-                    </h2>
-
-                    <p>
-                        Clear, patient-friendly information about cancer,
-                        diagnosis, treatment and care.
-                    </p>
-
-                </div>
-
-
-                <div class="library-grid">
-
-                    <article class="library-card">
-                        <span>🩺</span>
-                        <h3>Cancer Types</h3>
-                        <p>
-                            Learn about different cancers and their common
-                            signs, diagnosis and treatment approaches.
-                        </p>
-                    </article>
-
-
-                    <article class="library-card">
-                        <span>🧪</span>
-                        <h3>Tests & Procedures</h3>
-                        <p>
-                            Understand biopsies, scans, blood tests,
-                            pathology and other procedures.
-                        </p>
-                    </article>
-
-
-                    <article class="library-card">
-                        <span>💊</span>
-                        <h3>Treatment & Medicines</h3>
-                        <p>
-                            Learn about chemotherapy, radiotherapy, surgery,
-                            medicines and supportive care.
-                        </p>
-                    </article>
-
-
-                    <article class="library-card">
-                        <span>🥗</span>
-                        <h3>Nutrition & Wellness</h3>
-                        <p>
-                            Evidence-based information about nutrition,
-                            hydration, activity and recovery.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SUPPORT
-        ========================== -->
-
-        <section id="support" class="support-section">
-
-            <div class="container">
-
-                <div class="section-heading centered">
-
-                    <span class="eyebrow">
-                        SUPPORT NETWORK
-                    </span>
-
-                    <h2>
-                        Care goes beyond treatment.
-                    </h2>
-
-                    <p>
-                        Finding the right practical support can be part of
-                        the cancer journey.
-                    </p>
-
-                </div>
-
-
-                <div class="support-grid">
-
-                    <a href="#" class="support-card">
-                        <span>🏥</span>
-                        <h3>Find Care</h3>
-                        <p>Hospitals, cancer centres and care resources.</p>
-                    </a>
-
-
-                    <a href="#" class="support-card">
-                        <span>💰</span>
-                        <h3>Financial Help</h3>
-                        <p>Explore assistance schemes and support resources.</p>
-                    </a>
-
-
-                    <a href="#" class="support-card">
-                        <span>🫁</span>
-                        <h3>Oxygen Help</h3>
-                        <p>Future network for oxygen equipment support.</p>
-                    </a>
-
-
-                    <a href="#" class="support-card">
-                        <span>💊</span>
-                        <h3>Medicine Help</h3>
-                        <p>Future authorized medicine assistance network.</p>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             AI
-        ========================== -->
-
-        <section class="ai-section">
-
-            <div class="container ai-content">
-
-                <span class="eyebrow">
-                    COMING SOON
-                </span>
-
-                <h2>
-                    Meet CRUSTAR AI
-                </h2>
-
-                <p>
-                    A future cancer-care companion designed to explain
-                    medical information, organize questions and help people
-                    understand their journey.
-                </p>
-
-                <div class="ai-note">
-                    AI will provide information and support — not diagnosis
-                    or independent medical treatment decisions.
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             MEMORIAL
-        ========================== -->
-
-        <section id="about" class="memorial-section">
-
-            <div class="container memorial-content">
-
-                <span class="eyebrow">
-                    OUR PURPOSE
-                </span>
-
-                <h2>
-                    Built with compassion. Created to help.
-                </h2>
-
-                <p>
-                    CRUSTAR CARE is being created to make cancer information,
-                    early action and practical support easier to understand
-                    and access.
-                </p>
-
-                <div class="memorial-line"></div>
-
-                <p class="memorial-text">
-                    A project built in memory of a loved one and for every
-                    family facing the uncertainty of cancer.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             DISCLAIMER
-        ========================== -->
-
-        <section class="disclaimer-section">
-
-            <div class="container">
-
-                <h3>Important Medical Information</h3>
-
-                <p>
-                    CRUSTAR CARE is an educational and support platform.
-                    Information provided on this website is not a diagnosis,
-                    medical prescription or substitute for consultation with
-                    a qualified healthcare professional.
-                </p>
-
-                <p>
-                    If you have concerning or emergency symptoms, seek
-                    appropriate medical care promptly.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-            <div>
-
-                <div class="footer-brand">
-                    CRUSTAR CARE
-                </div>
-
-                <p>
-                    From the first doubt to the entire journey.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a href="#early-detection">Early Detection</a>
-                <a href="#cancer-library">Cancer Library</a>
-                <a href="#support">Support</a>
-                <a href="#about">About</a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 CRUSTAR CARE. All rights reserved.
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="#home" aria-label="CRUSTAR CARE home">
+            <span class="brand-name">CRUSTAR <span>CARE</span></span>
+            <span class="brand-tagline">Care, clarity and support</span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mainNav">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="#early-detection">Early Detection</a>
+            <a href="#ai">AI</a>
+            <a href="#cancer-care">Cancer Care</a>
+            <a href="#patient-journey">Patient Journey</a>
+            <a href="#find-support">Find Support</a>
+            <a href="#fundraising">Fundraising</a>
+            <a href="#community">Community</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div>
+            <p class="eyebrow">CRUSTAR CANCER CARE</p>
+
+            <h1>
+                From the first doubt
+                <span>to the entire journey.</span>
+            </h1>
+
+            <p class="hero-copy">
+                Understand cancer. Recognize important warning signs.
+                Organize your care journey. Find support. Make informed
+                decisions together with your healthcare team.
             </p>
 
+            <div class="hero-actions">
+                <a href="#early-detection" class="btn btn-primary">
+                    Check My Risk →
+                </a>
+
+                <a href="#find-support" class="btn btn-outline">
+                    Find Support
+                </a>
+            </div>
+
+            <p class="hero-note">
+                Information and support — not a substitute for medical care.
+            </p>
         </div>
 
-    </footer>
+        <aside class="hero-panel">
+            <p class="eyebrow">YOUR NEXT STEP</p>
+
+            <h2>What should I do next?</h2>
+
+            <p>
+                Explore symptoms, screening information, cancer education
+                and practical support for your journey.
+            </p>
+
+            <a href="#early-detection" class="text-link">
+                Start here →
+            </a>
+        </aside>
+
+    </div>
+</section>
 
 
-    <script src="js/script.js"></script>
+<!-- QUICK NAVIGATION -->
+<section class="quick-nav" aria-label="Explore CRUSTAR CARE">
+    <div class="container quick-nav-grid">
+
+        <a class="quick-link" href="#early-detection">
+            🩺 Early Detection
+        </a>
+
+        <a class="quick-link" href="#ai">
+            ✨ AI Assistance
+        </a>
+
+        <a class="quick-link" href="#cancer-care">
+            📚 Cancer Care
+        </a>
+
+        <a class="quick-link" href="#patient-journey">
+            🗂️ Patient Journey
+        </a>
+
+    </div>
+</section>
+
+
+<!-- MASTER ARCHITECTURE -->
+<section class="section section-light" id="our-architecture">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">THE CRUSTAR CARE ECOSYSTEM</p>
+
+            <h2>One place for the entire cancer care journey.</h2>
+
+            <p>
+                From early action and reliable information to organizing
+                treatment, finding support and connecting with others,
+                every part of CRUSTAR CARE has a purpose.
+            </p>
+        </div>
+
+        <div class="architecture-box">
+
+            <div class="architecture-top">
+
+                <article class="architecture-pillar">
+                    <h3>🩺 Early Detection</h3>
+                    <ul>
+                        <li><a href="#early-detection">Risk Check</a></li>
+                        <li><a href="#early-detection">Symptoms</a></li>
+                        <li><a href="#early-detection">Screening</a></li>
+                    </ul>
+                </article>
+
+                <article class="architecture-pillar">
+                    <h3>✨ AI</h3>
+                    <ul>
+                        <li><a href="#ai">AI Assistant</a></li>
+                        <li><a href="#ai">Report AI</a></li>
+                        <li><a href="#ai">Questions & Answers</a></li>
+                    </ul>
+                </article>
+
+                <article class="architecture-pillar">
+                    <h3>📚 Cancer Care</h3>
+                    <ul>
+                        <li><a href="#cancer-care">Cancer Library</a></li>
+                        <li><a href="#cancer-care">Tests & Procedures</a></li>
+                        <li><a href="#cancer-care">Treatment</a></li>
+                        <li><a href="#cancer-care">Medicine Information</a></li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <div class="flow-connector"></div>
+
+            <div class="flow-node">
+                <h3>🗂️ PATIENT JOURNEY</h3>
+                <p>Documents • Timeline • Appointments • Expenses</p>
+            </div>
+
+            <div class="flow-connector"></div>
+
+            <div class="flow-node">
+                <h3>🤝 FIND SUPPORT</h3>
+                <p>Hospitals • Government Schemes • NGOs</p>
+            </div>
+
+            <div class="flow-connector"></div>
+
+            <div class="flow-node gold-node">
+                <h3>💛 FUNDRAISING</h3>
+                <p>Fund a Patient • Donate to a Fund • Sponsor Care</p>
+            </div>
+
+            <div class="flow-connector"></div>
+
+            <div class="flow-node community-node">
+                <h3>🌿 COMMUNITY</h3>
+                <p>Patients • Caregivers • Survivors • Support</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- EARLY DETECTION -->
+<section class="section" id="early-detection">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">01 / EARLY DETECTION</p>
+
+            <h2>Recognize. Understand. Take the next step.</h2>
+
+            <p>
+                Learn about possible warning signs, recommended screening
+                and when to seek medical advice. Symptoms alone cannot
+                confirm or rule out cancer.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">🩺</div>
+                <span class="card-label">Start here</span>
+                <h3>Risk Check</h3>
+                <p>
+                    Explore relevant risk factors and receive general
+                    guidance on what to discuss with a healthcare professional.
+                </p>
+                <a class="card-link" href="#early-action-note">
+                    Explore the approach →
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🔎</div>
+                <h3>Symptoms & Warning Signs</h3>
+                <p>
+                    Learn about persistent or unexplained changes that may
+                    need medical assessment.
+                </p>
+                <a class="card-link" href="#cancer-care">
+                    Explore cancer information →
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">📅</div>
+                <h3>Screening Guide</h3>
+                <p>
+                    Understand the role of screening, who may benefit and
+                    why recommendations depend on individual circumstances.
+                </p>
+                <a class="card-link" href="#cancer-care">
+                    Explore the care library →
+                </a>
+            </article>
+
+        </div>
+
+        <div class="support-banner" id="early-action-note">
+            <div>
+                <h3>Concerned about a symptom?</h3>
+                <p>
+                    Don't wait for an online tool to confirm a problem.
+                    Contact a qualified healthcare professional about
+                    persistent, unusual or worsening symptoms.
+                </p>
+            </div>
+
+            <a href="#find-support" class="btn btn-primary">
+                Find Support →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AI -->
+<section class="section section-dark" id="ai">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">02 / CRUSTAR AI</p>
+
+            <h2>Technology that helps make information clearer.</h2>
+
+            <p>
+                Our planned AI tools will help people understand information
+                and prepare for conversations with healthcare professionals.
+                They will not replace doctors or provide a cancer diagnosis.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">💬</div>
+                <span class="card-label">Planned feature</span>
+                <h3>AI Assistant</h3>
+                <p>
+                    Ask general questions about cancer care and learn
+                    where to find trustworthy information.
+                </p>
+                <span class="card-link">Planned for a future release</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">📄</div>
+                <span class="card-label">Planned feature</span>
+                <h3>Report AI</h3>
+                <p>
+                    Help explain medical terminology in reports, while
+                    protecting personal information and preserving clinical context.
+                </p>
+                <span class="card-link">Planned for a future release</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">❓</div>
+                <span class="card-label">Planned feature</span>
+                <h3>Questions & Answers</h3>
+                <p>
+                    Prepare questions for appointments and better understand
+                    the information provided by your care team.
+                </p>
+                <span class="card-link">Planned for a future release</span>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CANCER CARE -->
+<section class="section" id="cancer-care">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">03 / CANCER CARE</p>
+
+            <h2>Understand the journey, one step at a time.</h2>
+
+            <p>
+                A planned knowledge library covering cancer, diagnosis,
+                treatment, side effects and follow-up. Information will
+                support—not replace—individual medical advice.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">📚</div>
+                <h3>Cancer Library</h3>
+                <p>
+                    Learn about different cancer types, stages, risk factors,
+                    prevention and common terminology.
+                </p>
+                <span class="card-link">Knowledge library planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🧪</div>
+                <h3>Tests & Procedures</h3>
+                <p>
+                    Understand the purpose of common tests, biopsies,
+                    scans and diagnostic procedures.
+                </p>
+                <span class="card-link">Educational guides planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🏥</div>
+                <h3>Treatment</h3>
+                <p>
+                    Explore general information about surgery, chemotherapy,
+                    radiotherapy, immunotherapy and follow-up care.
+                </p>
+                <span class="card-link">Treatment guides planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">💊</div>
+                <h3>Medicine Information</h3>
+                <p>
+                    Learn about medicine purposes, common terminology,
+                    side effects and questions to ask a pharmacist or doctor.
+                </p>
+                <span class="card-link">Medicine library planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🥗</div>
+                <h3>Nutrition & Wellbeing</h3>
+                <p>
+                    Explore evidence-informed guidance on nutrition,
+                    activity, tobacco cessation and supportive care.
+                </p>
+                <span class="card-link">Wellbeing resources planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🛡️</div>
+                <h3>Myths & Facts</h3>
+                <p>
+                    Separate common cancer myths from evidence-informed
+                    information and discuss concerns with qualified clinicians.
+                </p>
+                <span class="card-link">Myth-busting guides planned</span>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PATIENT JOURNEY -->
+<section class="section section-dark" id="patient-journey">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">04 / PATIENT JOURNEY</p>
+
+            <h2>Keep the important parts of care organized.</h2>
+
+            <p>
+                A planned patient workspace to help people and caregivers
+                organize information throughout diagnosis and treatment.
+            </p>
+        </div>
+
+        <div class="journey-grid">
+
+            <article class="journey-item">
+                <div class="card-icon">📁</div>
+                <h3>Documents</h3>
+                <p>Reports, prescriptions, scans and medical records.</p>
+            </article>
+
+            <article class="journey-item">
+                <div class="card-icon">🗓️</div>
+                <h3>Timeline</h3>
+                <p>Important dates, tests, treatments and follow-ups.</p>
+            </article>
+
+            <article class="journey-item">
+                <div class="card-icon">🩺</div>
+                <h3>Appointments</h3>
+                <p>Prepare questions and organize upcoming visits.</p>
+            </article>
+
+            <article class="journey-item">
+                <div class="card-icon">₹</div>
+                <h3>Expenses</h3>
+                <p>Organize bills and track care-related expenses.</p>
+            </article>
+
+        </div>
+
+        <div class="support-banner">
+            <div>
+                <h3>A more organized care journey.</h3>
+                <p>
+                    Secure document storage and patient accounts will require
+                    appropriate privacy protections before launch.
+                </p>
+            </div>
+
+            <span class="btn btn-light">Planned feature</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FIND SUPPORT -->
+<section class="section" id="find-support">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">05 / FIND SUPPORT</p>
+
+            <h2>Help people find the support they need.</h2>
+
+            <p>
+                We plan to build a useful directory of care providers,
+                assistance programmes and organizations, with information
+                verified as far as practicable.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">🏥</div>
+                <h3>Hospitals & Care Centres</h3>
+                <p>
+                    Find cancer hospitals, specialist services and relevant
+                    contact information.
+                </p>
+                <span class="card-link">Directory planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🇮🇳</div>
+                <h3>Government Schemes</h3>
+                <p>
+                    Explore potentially relevant health schemes, eligibility
+                    requirements and application information.
+                </p>
+                <span class="card-link">Scheme guide planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🤝</div>
+                <h3>NGOs & Assistance</h3>
+                <p>
+                    Find organizations that may provide patient guidance,
+                    accommodation, transport or other support.
+                </p>
+                <span class="card-link">Support directory planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🫁</div>
+                <h3>Oxygen Assistance</h3>
+                <p>
+                    A planned directory for verified oxygen equipment
+                    providers and authorized assistance programmes.
+                </p>
+                <span class="card-link">Oxygen support planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">💊</div>
+                <h3>Medicine Assistance</h3>
+                <p>
+                    Explore legitimate medicine assistance programmes
+                    through authorized hospitals, pharmacies or NGOs.
+                </p>
+                <span class="card-link">Medicine support planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🩸</div>
+                <h3>Blood & Platelet Support</h3>
+                <p>
+                    A planned way to find authorized services and
+                    appropriate donor coordination resources.
+                </p>
+                <span class="card-link">Support network planned</span>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FUNDRAISING -->
+<section class="section section-light" id="fundraising">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">06 / FUNDRAISING</p>
+
+            <h2>Make support more accessible.</h2>
+
+            <p>
+                We aim to explore responsible ways to connect people who
+                need help with people and organizations willing to provide it.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">💛</div>
+                <h3>Fund a Patient</h3>
+                <p>
+                    A planned pathway to help eligible patients access
+                    verified fundraising opportunities.
+                </p>
+                <span class="card-link">Patient assistance planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🎁</div>
+                <h3>Donate to a Fund</h3>
+                <p>
+                    Explore ways to support verified patient assistance
+                    or registered charitable programmes.
+                </p>
+                <span class="card-link">Donation programme planned</span>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🌱</div>
+                <h3>Sponsor Care</h3>
+                <p>
+                    A planned way for individuals and organizations to
+                    support defined patient needs or assistance initiatives.
+                </p>
+                <span class="card-link">Sponsorship programme planned</span>
+            </article>
+
+        </div>
+
+        <div class="support-banner">
+            <div>
+                <h3>Trust comes first.</h3>
+                <p>
+                    Fundraising will require appropriate verification,
+                    transparent accounting, secure payment processing
+                    and compliance with applicable laws before launch.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- COMMUNITY -->
+<section class="section" id="community">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">07 / COMMUNITY</p>
+
+            <h2>No one should have to navigate the journey alone.</h2>
+
+            <p>
+                A future community designed to help patients, caregivers
+                and survivors exchange support respectfully and safely.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="feature-card">
+                <div class="card-icon">💚</div>
+                <h3>Patients</h3>
+                <p>
+                    A space to learn, share experiences and find
+                    understanding from others on similar journeys.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🤲</div>
+                <h3>Caregivers</h3>
+                <p>
+                    Practical guidance and peer support for family
+                    members and people caring for loved ones.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <div class="card-icon">🌿</div>
+                <h3>Survivors & Support</h3>
+                <p>
+                    A planned community for encouragement, shared
+                    experiences and life beyond treatment.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="support-banner">
+            <div>
+                <h3>A community built on respect.</h3>
+                <p>
+                    Community features will need privacy protections,
+                    moderation, reporting tools and safeguards against
+                    harmful medical misinformation.
+                </p>
+            </div>
+
+            <span class="btn btn-primary">Community planned</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MEMORIAL -->
+<section class="memorial" id="memorial">
+    <div class="container">
+
+        <div class="memorial-heart">❤️</div>
+
+        <p class="eyebrow">THE PURPOSE BEHIND OUR JOURNEY</p>
+
+        <h2>In Memory Of</h2>
+
+        <div class="memorial-name">
+            Er. Abdul Hai Khan
+        </div>
+
+        <p class="memorial-quote">
+            “May this work help another family find clarity,
+            support and hope when they need it most.”
+        </p>
+
+        <p style="margin-top: 22px;">
+            CRUSTAR CARE is being built in loving memory of Er. Abdul Hai Khan,
+            with the hope of helping people navigate cancer with better
+            information, compassionate support and greater dignity.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+    <div class="container">
+        <p>
+            <strong>Important medical information:</strong>
+            CRUSTAR CARE is an educational and support initiative.
+            Its information and planned tools do not diagnose cancer,
+            replace medical advice, or prescribe treatment. Seek assessment
+            from a qualified healthcare professional for symptoms or concerns.
+            For a medical emergency, contact local emergency services.
+        </p>
+    </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a class="brand" href="#home">
+                    <span class="brand-name">
+                        CRUSTAR <span>CARE</span>
+                    </span>
+                    <span class="brand-tagline">
+                        From the first doubt to the entire journey
+                    </span>
+                </a>
+
+                <p>
+                    Cancer information, care navigation and practical
+                    support — built around people and their journeys.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="#early-detection">Early Detection</a>
+                <a href="#ai">CRUSTAR AI</a>
+                <a href="#cancer-care">Cancer Care</a>
+                <a href="#patient-journey">Patient Journey</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support & Community</h3>
+                <a href="#find-support">Find Support</a>
+                <a href="#fundraising">Fundraising</a>
+                <a href="#community">Community</a>
+                <a href="#memorial">Our Purpose</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="currentYear"></span> CRUSTAR CARE</span>
+            <span>Built with compassion, in memory of Er. Abdul Hai Khan.</span>
+        </div>
+
+    </div>
+</footer>
+
+
+<script>
+(function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = mainNav.classList.toggle("open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mainNav.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
+            menuToggle.textContent = "☰";
+        });
+    });
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+})();
+</script>
 
 </body>
-
 </html>
