@@ -34,7 +34,7 @@ footer{background:#041f1e;color:#dbe7e1;text-align:center;padding:23px 5%;font-s
 <footer><strong>CRUSTAR CARE</strong> · In Memory of Er. Abdul Hai Khan<br>Educational resource project · Medical content and translations will be reviewed before publication.</footer>
 <script>
 const cancers=[
-["Lung cancer","Lungs & chest","🫁"],["Non-small cell lung cancer","Lungs & chest","🫁"],["Small cell lung cancer","Lungs & chest","🫁"],["Mesothelioma","Lungs & chest","🫁"],["Thymoma and thymic carcinoma","Lungs & chest","🫁"],
+["Lung cancer","Lungs & chest","🫁","lung-cancer.html"],["Non-small cell lung cancer","Lungs & chest","🫁"],["Small cell lung cancer","Lungs & chest","🫁"],["Mesothelioma","Lungs & chest","🫁"],["Thymoma and thymic carcinoma","Lungs & chest","🫁"],
 ["Breast cancer","Breast","🎗️"],["Male breast cancer","Breast","🎗️"],["Ductal carcinoma in situ (DCIS)","Breast","🎗️"],
 ["Hodgkin lymphoma","Blood & lymphatic","🩸"],["Non-Hodgkin lymphoma","Blood & lymphatic","🩸"],["Diffuse large B-cell lymphoma (DLBCL)","Blood & lymphatic","🩸"],["Burkitt lymphoma","Blood & lymphatic","🩸"],["Primary CNS lymphoma","Blood & lymphatic","🩸"],["Leukaemia","Blood & lymphatic","🩸"],["Acute lymphoblastic leukaemia (ALL)","Blood & lymphatic","🩸"],["Acute myeloid leukaemia (AML)","Blood & lymphatic","🩸"],["Chronic lymphocytic leukaemia (CLL)","Blood & lymphatic","🩸"],["Chronic myeloid leukaemia (CML)","Blood & lymphatic","🩸"],["Multiple myeloma","Blood & lymphatic","🩸"],["Myelodysplastic syndromes","Blood & lymphatic","🩸"],["Myeloproliferative neoplasms","Blood & lymphatic","🩸"],
 ["Brain tumours","Brain & nervous system","🧠"],["Glioma","Brain & nervous system","🧠"],["Astrocytoma","Brain & nervous system","🧠"],["Medulloblastoma","Brain & nervous system","🧠"],["Meningioma","Brain & nervous system","🧠"],["Spinal cord tumours","Brain & nervous system","🧠"],["Eye cancer","Brain & nervous system","👁️"],["Retinoblastoma","Brain & nervous system","👁️"],
@@ -51,5 +51,12 @@ const cancers=[
 const search=document.getElementById('search'),category=document.getElementById('category'),grid=document.getElementById('grid'),count=document.getElementById('count'),empty=document.getElementById('empty');
 [...new Set(cancers.map(c=>c[1]))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;category.appendChild(o)});
 function render(){const q=search.value.trim().toLowerCase(),cat=category.value;const list=cancers.filter(c=>c[0].toLowerCase().includes(q)&&(!cat||c[1]===cat));grid.innerHTML=list.map(c=>`<article class="card"><div class="cardtop"><div class="icon" aria-hidden="true">${c[2]}</div><div><h3>${c[0]}</h3><div class="category">${c[1]}</div></div></div><p>Planned illustrated guide: anatomy, relevant tests and procedures, staging, treatment options and supportive care.</p><div class="status">Detailed guide in development</div></article>`).join('');count.textContent=`Showing ${list.length} of ${cancers.length} listings`;empty.style.display=list.length?'none':'block'}
-search.addEventListener('input',render);category.addEventListener('change',render);render();
+search.addEventListener('input',render);category.addEventListener('change',render);
+  grid.addEventListener('click',e=>{
+    const card=e.target.closest('.card');
+    if(!card)return;
+    const name=card.querySelector('h3')?.textContent;
+    const item=cancers.find(c=>c[0]===name);
+    if(item?.[3])location.href=item[3];
+});render();
 </script></body></html>
