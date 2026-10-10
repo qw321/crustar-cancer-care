@@ -1,11 +1,362 @@
-/* CRUSTAR Cancer Care
-   Responsive stylesheet
-*/
+/* =========================================================
+   CRUSTAR CARE
+   Responsive Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav a {
+        font-size: 0.84rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 3.4rem;
+    }
+
+    .action-grid,
+    .library-grid,
+    .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
+    .container {
+        width: min(92%, 680px);
+    }
+
+
+    /* HEADER */
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding: 75px 0 70px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: none;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.45rem, 11vw, 3.4rem);
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text > p {
+        font-size: 1rem;
+    }
+
+    .hero-card {
+        padding: 32px;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+    /* COMMON SECTIONS */
+
+    .quick-actions,
+    .feature-section,
+    .library-section,
+    .support-section {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.15rem;
+    }
+
+
+    /* ACTION CARDS */
+
+    .action-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .action-card {
+        min-height: auto;
+
+        padding: 26px;
+    }
+
+
+    /* EARLY DETECTION */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .feature-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .feature-panel {
+        padding: 8px;
+    }
+
+    .feature-item {
+        padding: 20px 16px;
+    }
+
+
+    /* CANCER LIBRARY */
+
+    .library-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .library-card {
+        min-height: auto;
+
+        padding: 27px;
+    }
+
+
+    /* SUPPORT */
+
+    .support-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .support-card {
+        min-height: auto;
+
+        padding: 27px;
+    }
+
+
+    /* AI */
+
+    .ai-section {
+        padding: 80px 0;
+    }
+
+    .ai-section h2 {
+        font-size: 2.35rem;
+    }
+
+    .ai-section p {
+        font-size: 0.95rem;
+    }
+
+
+    /* MEMORIAL */
+
+    .memorial-section {
+        padding: 80px 0;
+    }
+
+    .memorial-content h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* DISCLAIMER */
+
+    .disclaimer-section {
+        padding: 35px 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-inner {
+        flex-direction: column;
+
+        padding: 50px 0 35px;
+
+        gap: 30px;
+    }
+
+    .footer-links {
+        gap: 15px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 91%;
+    }
+
+
+    /* BRAND */
+
+    .brand-main {
+        font-size: 1.15rem;
+    }
+
+    .brand-care {
+        font-size: 0.9rem;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text > p {
+        font-size: 0.94rem;
+    }
+
+    .hero-card {
+        padding: 27px;
+    }
+
+    .hero-card h2 {
+        font-size: 1.65rem;
+    }
+
+
+    /* SECTIONS */
+
+    .quick-actions,
+    .feature-section,
+    .library-section,
+    .support-section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 1.9rem;
+    }
+
+
+    /* CARDS */
+
+    .action-card,
+    .library-card,
+    .support-card {
+        padding: 24px;
+    }
+
+
+    /* EARLY DETECTION */
+
+    .feature-content h2 {
+        font-size: 1.95rem;
+    }
+
+    .feature-item {
+        gap: 15px;
+
+        padding: 18px 12px;
+    }
+
+
+    /* AI */
+
+    .ai-section {
+        padding: 70px 0;
+    }
+
+    .ai-section h2 {
+        font-size: 2rem;
+    }
+
+    .ai-note {
+        font-size: 0.76rem;
+    }
+
+
+    /* MEMORIAL */
+
+    .memorial-section {
+        padding: 70px 0;
+    }
+
+    .memorial-content h2 {
+        font-size: 1.95rem;
+    }
+
+
+    /* FOOTER */
+
+    .footer-links {
+        flex-direction: column;
+
+        gap: 12px;
     }
 
 }
