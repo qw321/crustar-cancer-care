@@ -1076,78 +1076,284 @@ button {
 
 
 <!-- EARLY DETECTION -->
+<!-- EARLY DETECTION -->
 <section class="section" id="early-detection">
-    <div class="container">
+  <div class="container">
 
-        <div class="section-heading">
-            <p class="eyebrow">01 / EARLY DETECTION</p>
+    <div class="section-heading">
+      <p class="eyebrow">01 / EARLY DETECTION</p>
 
-            <h2>Recognize. Understand. Take the next step.</h2>
+      <h2>Recognize. Understand. Take the next step.</h2>
 
-            <p>
-                Learn about possible warning signs, recommended screening
-                and when to seek medical advice. Symptoms alone cannot
-                confirm or rule out cancer.
-            </p>
-        </div>
+      <p>
+        Learn about possible warning signs, screening and when to seek
+        medical advice. Symptoms alone cannot confirm or rule out cancer.
+      </p>
+    </div>
 
-        <div class="card-grid">
+    <!-- RISK CHECK -->
+    <div class="feature-card risk-check-card">
 
-            <article class="feature-card">
-                <div class="card-icon">🩺</div>
-                <span class="card-label">Start here</span>
-                <h3>Risk Check</h3>
-                <p>
-                    Explore relevant risk factors and receive general
-                    guidance on what to discuss with a healthcare professional.
-                </p>
-                <a class="card-link" href="#early-action-note">
-                    Explore the approach →
-                </a>
-            </article>
+      <div class="feature-icon">🩺</div>
 
-            <article class="feature-card">
-                <div class="card-icon">🔎</div>
-                <h3>Symptoms & Warning Signs</h3>
-                <p>
-                    Learn about persistent or unexplained changes that may
-                    need medical assessment.
-                </p>
-                <a class="card-link" href="#cancer-care">
-                    Explore cancer information →
-                </a>
-            </article>
+      <h3>Risk Check</h3>
 
-            <article class="feature-card">
-                <div class="card-icon">📅</div>
-                <h3>Screening Guide</h3>
-                <p>
-                    Understand the role of screening, who may benefit and
-                    why recommendations depend on individual circumstances.
-                </p>
-                <a class="card-link" href="#cancer-care">
-                    Explore the care library →
-                </a>
-            </article>
+      <p>
+        A simple educational check to help you decide what to do next.
+        It does not diagnose cancer or calculate your probability of cancer.
+      </p>
 
-        </div>
-
-        <div class="support-banner" id="early-action-note">
-            <div>
-                <h3>Concerned about a symptom?</h3>
-                <p>
-                    Don't wait for an online tool to confirm a problem.
-                    Contact a qualified healthcare professional about
-                    persistent, unusual or worsening symptoms.
-                </p>
-            </div>
-
-            <a href="#find-support" class="btn btn-primary">
-                Find Support →
-            </a>
-        </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="openRiskCheck()">
+        Start Risk Check →
+      </button>
 
     </div>
+
+    <!-- RISK CHECK PANEL -->
+    <div id="riskCheckPanel" class="risk-check-panel" hidden>
+
+      <div class="risk-check-inner">
+
+        <button
+          type="button"
+          class="risk-close"
+          onclick="closeRiskCheck()"
+          aria-label="Close Risk Check">
+          ×
+        </button>
+
+        <p class="eyebrow">CRUSTAR CARE / RISK CHECK</p>
+
+        <h3>Let's understand what you need next</h3>
+
+        <p class="risk-intro">
+          This educational tool does not diagnose cancer. Select the
+          statements that apply to you today.
+        </p>
+
+        <div class="risk-question">
+
+          <h4>1. Are you experiencing any new or persistent symptoms?</h4>
+
+          <label>
+            <input type="checkbox" id="riskSymptoms">
+            Yes — I have a new, persistent, unexplained or worsening symptom.
+          </label>
+
+        </div>
+
+        <div class="risk-question">
+
+          <h4>2. Are you concerned about cancer screening?</h4>
+
+          <label>
+            <input type="checkbox" id="riskScreening">
+            Yes — I want to understand whether I should discuss screening.
+          </label>
+
+        </div>
+
+        <div class="risk-question">
+
+          <h4>3. Do you have personal or family cancer history?</h4>
+
+          <label>
+            <input type="checkbox" id="riskHistory">
+            Yes — I have a personal or family history that concerns me.
+          </label>
+
+        </div>
+
+        <div class="risk-question">
+
+          <h4>4. Have you already received a cancer diagnosis?</h4>
+
+          <label>
+            <input type="checkbox" id="riskDiagnosed">
+            Yes — I am already diagnosed and need help navigating care.
+          </label>
+
+        </div>
+
+        <div class="risk-question">
+
+          <h4>5. Are you having a medical emergency right now?</h4>
+
+          <label>
+            <input type="checkbox" id="riskEmergency">
+            Yes — I have severe or life-threatening symptoms right now.
+          </label>
+
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary risk-result-button"
+          onclick="runRiskCheck()">
+          See My Next Step →
+        </button>
+
+        <div id="riskResult" class="risk-result" aria-live="polite"></div>
+
+        <p class="risk-disclaimer">
+          CRUSTAR CARE provides educational information and navigation
+          support. It is not a substitute for examination, diagnosis or
+          treatment by a qualified healthcare professional.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- OTHER EARLY DETECTION RESOURCES -->
+    <div class="card-grid early-detection-grid">
+
+      <article class="feature-card">
+
+        <div class="feature-icon">🔎</div>
+
+        <h3>Symptoms & Warning Signs</h3>
+
+        <p>
+          Understand symptoms that may need medical evaluation and
+          learn when it is important not to ignore persistent changes.
+        </p>
+
+        <a href="#cancer-care" class="btn btn-secondary">
+          Learn More →
+        </a>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">📋</div>
+
+        <h3>Screening Guide</h3>
+
+        <p>
+          Learn what cancer screening means, who may benefit from it,
+          and why screening recommendations depend on individual risk.
+        </p>
+
+        <a href="#cancer-care" class="btn btn-secondary">
+          Explore Screening →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+  <style>
+    .risk-check-card {
+      position: relative;
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 35px;
+    }
+
+    .risk-check-card .feature-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .risk-check-panel {
+      max-width: 900px;
+      margin: 0 auto 45px;
+    }
+
+    .risk-check-panel[hidden] {
+      display: none;
+    }
+
+    .risk-check-inner {
+      position: relative;
+      padding: 35px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .risk-close {
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      cursor: pointer;
+      color: #062f2d;
+    }
+
+    .risk-intro {
+      margin-bottom: 25px;
+    }
+
+    .risk-question {
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 14px;
+      background: #f5f8f7;
+      border-left: 4px solid #d4af37;
+    }
+
+    .risk-question h4 {
+      margin-bottom: 12px;
+      color: #062f2d;
+    }
+
+    .risk-question label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .risk-question input {
+      margin-top: 5px;
+      accent-color: #d4af37;
+    }
+
+    .risk-result {
+      margin-top: 25px;
+    }
+
+    .risk-result-box {
+      padding: 22px;
+      border-radius: 14px;
+      background: #f5f8f7;
+      border-left: 5px solid #d4af37;
+    }
+
+    .risk-result-box h4 {
+      margin-bottom: 10px;
+      color: #062f2d;
+    }
+
+    .risk-disclaimer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 700px) {
+      .risk-check-inner {
+        padding: 25px 18px;
+      }
+
+      .risk-question {
+        padding: 16px;
+      }
+    }
+  </style>
+
 </section>
 
 
