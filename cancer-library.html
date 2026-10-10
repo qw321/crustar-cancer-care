@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CRUSTAR CARE Cancer Library">
+<title>Cancer Library | CRUSTAR CARE</title>
+<style>
+:root{--g:#062f2d;--g2:#0b4541;--gold:#d4af37;--bg:#f7f5ef;--ink:#17302f;--muted:#61716e;--line:#dce4df}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
+header{background:var(--g);color:white;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:3px solid var(--gold)}
+.brand{font-weight:800;letter-spacing:2px}.brand span{color:var(--gold)}.tagline{font-size:.85rem;color:#e2ece7}
+.back{color:white;text-decoration:none;border:1px solid #9ab3a9;padding:8px 13px;border-radius:22px}
+.hero{background:linear-gradient(130deg,var(--g),var(--g2));color:white;padding:48px 5% 42px}.eyebrow{color:var(--gold);font-size:.78rem;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.08;margin:12px 0;max-width:800px}.hero p{max-width:780px;color:#e2ece7}.note{font-size:.86rem!important}
+main{max-width:1200px;margin:auto;padding:28px 5% 55px}.toolbar{background:white;border:1px solid var(--line);padding:18px;border-radius:16px;display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+input,select{width:100%;padding:13px 14px;border:1px solid #cbd7d1;border-radius:10px;background:white;font-size:1rem;color:var(--ink)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 14px}h2{margin:0;color:var(--g);font-size:1.4rem}.count{font-size:.9rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:17px;min-height:174px;display:flex;flex-direction:column}
+.cardtop{display:flex;gap:11px;align-items:flex-start}.icon{width:42px;height:42px;border-radius:12px;background:#eaf2ee;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+h3{font-size:1rem;margin:2px 0 5px}.category{font-size:.8rem;color:var(--muted)}.card p{font-size:.89rem;color:#51625e;margin:13px 0}
+.status{margin-top:auto;font-size:.77rem;font-weight:bold;color:#755c00;background:#fbf4d9;border-radius:20px;padding:6px 10px;align-self:flex-start}
+.empty{display:none;background:white;border-radius:12px;padding:25px;text-align:center;color:var(--muted)}
+.notice{margin-top:28px;background:#fff9e6;border-left:4px solid var(--gold);padding:15px 18px;border-radius:8px;font-size:.9rem}
+footer{background:#041f1e;color:#dbe7e1;text-align:center;padding:23px 5%;font-size:.85rem}footer strong{color:var(--gold)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{grid-template-columns:1fr}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.card{min-height:0}}
+</style></head>
+<body>
+<header><div><div class="brand">CRUSTAR <span>CARE</span></div><div class="tagline">From the first doubt to the entire journey.</div></div><a class="back" href="index.html">← Back to Home</a></header>
+<section class="hero"><div class="eyebrow">Explore · Understand · Prepare</div><h1>Cancer Knowledge Library</h1><p>Explore cancer types by body system. Our planned guides will explain anatomy, diagnostic tests, procedures, staging, treatment options and supportive care with clear medical illustrations.</p><p class="note">Guides are being developed in stages. A directory listing does not mean a complete guide is available yet.</p></section>
+<main><div class="toolbar" role="search"><input id="search" type="search" placeholder="Search cancer (e.g., lung, lymphoma, leukaemia)" aria-label="Search cancer types"><select id="category" aria-label="Filter by body system"><option value="">All body systems</option></select></div>
+<div class="row"><h2>Browse cancer types</h2><div class="count" id="count" aria-live="polite"></div></div><div class="grid" id="grid"></div><div class="empty" id="empty">No matches. Try another search or select all body systems.</div>
+<div class="notice"><strong>Medical information notice:</strong> This library is for education, not diagnosis or personalised treatment advice. Symptoms and test results cannot confirm or exclude cancer by themselves. Tests and treatments depend on the specific cancer and clinical assessment.</div></main>
+<footer><strong>CRUSTAR CARE</strong> · In Memory of Er. Abdul Hai Khan<br>Educational resource project · Medical content and translations will be reviewed before publication.</footer>
+<script>
+const cancers=[
+["Lung cancer","Lungs & chest","🫁"],["Non-small cell lung cancer","Lungs & chest","🫁"],["Small cell lung cancer","Lungs & chest","🫁"],["Mesothelioma","Lungs & chest","🫁"],["Thymoma and thymic carcinoma","Lungs & chest","🫁"],
+["Breast cancer","Breast","🎗️"],["Male breast cancer","Breast","🎗️"],["Ductal carcinoma in situ (DCIS)","Breast","🎗️"],
+["Hodgkin lymphoma","Blood & lymphatic","🩸"],["Non-Hodgkin lymphoma","Blood & lymphatic","🩸"],["Diffuse large B-cell lymphoma (DLBCL)","Blood & lymphatic","🩸"],["Burkitt lymphoma","Blood & lymphatic","🩸"],["Primary CNS lymphoma","Blood & lymphatic","🩸"],["Leukaemia","Blood & lymphatic","🩸"],["Acute lymphoblastic leukaemia (ALL)","Blood & lymphatic","🩸"],["Acute myeloid leukaemia (AML)","Blood & lymphatic","🩸"],["Chronic lymphocytic leukaemia (CLL)","Blood & lymphatic","🩸"],["Chronic myeloid leukaemia (CML)","Blood & lymphatic","🩸"],["Multiple myeloma","Blood & lymphatic","🩸"],["Myelodysplastic syndromes","Blood & lymphatic","🩸"],["Myeloproliferative neoplasms","Blood & lymphatic","🩸"],
+["Brain tumours","Brain & nervous system","🧠"],["Glioma","Brain & nervous system","🧠"],["Astrocytoma","Brain & nervous system","🧠"],["Medulloblastoma","Brain & nervous system","🧠"],["Meningioma","Brain & nervous system","🧠"],["Spinal cord tumours","Brain & nervous system","🧠"],["Eye cancer","Brain & nervous system","👁️"],["Retinoblastoma","Brain & nervous system","👁️"],
+["Colorectal cancer","Digestive system","🩺"],["Colon cancer","Digestive system","🩺"],["Rectal cancer","Digestive system","🩺"],["Stomach (gastric) cancer","Digestive system","🩺"],["Oesophageal cancer","Digestive system","🩺"],["Liver cancer","Digestive system","🩺"],["Pancreatic cancer","Digestive system","🩺"],["Pancreatic neuroendocrine tumours","Digestive system","🩺"],["Gallbladder cancer","Digestive system","🩺"],["Bile duct cancer (cholangiocarcinoma)","Digestive system","🩺"],["Small intestine cancer","Digestive system","🩺"],["Anal cancer","Digestive system","🩺"],["Gastrointestinal stromal tumour (GIST)","Digestive system","🩺"],["Gastrointestinal neuroendocrine tumours","Digestive system","🩺"],
+["Kidney (renal cell) cancer","Urinary system","🫘"],["Bladder cancer","Urinary system","🫘"],["Ureter and renal pelvis cancer","Urinary system","🫘"],["Urethral cancer","Urinary system","🫘"],
+["Prostate cancer","Reproductive system","🧬"],["Testicular cancer","Reproductive system","🧬"],["Penile cancer","Reproductive system","🧬"],["Ovarian cancer","Reproductive system","🧬"],["Cervical cancer","Reproductive system","🧬"],["Endometrial (uterine) cancer","Reproductive system","🧬"],["Uterine sarcoma","Reproductive system","🧬"],["Vaginal cancer","Reproductive system","🧬"],["Vulvar cancer","Reproductive system","🧬"],["Fallopian tube cancer","Reproductive system","🧬"],["Gestational trophoblastic disease","Reproductive system","🧬"],
+["Melanoma","Skin","☀️"],["Basal cell skin cancer","Skin","☀️"],["Squamous cell skin cancer","Skin","☀️"],["Merkel cell carcinoma","Skin","☀️"],
+["Bone cancer","Bone & soft tissue","🦴"],["Osteosarcoma","Bone & soft tissue","🦴"],["Ewing sarcoma","Bone & soft tissue","🦴"],["Soft tissue sarcoma","Bone & soft tissue","🦴"],["Rhabdomyosarcoma","Bone & soft tissue","🦴"],["Chordoma","Bone & soft tissue","🦴"],["Kaposi sarcoma","Bone & soft tissue","🦴"],
+["Mouth and oral cavity cancer","Head & neck","👄"],["Tongue cancer","Head & neck","👄"],["Throat (pharyngeal) cancer","Head & neck","👄"],["Laryngeal cancer","Head & neck","👄"],["Nasopharyngeal cancer","Head & neck","👄"],["Nasal cavity and paranasal sinus cancer","Head & neck","👄"],["Salivary gland cancer","Head & neck","👄"],["Lip cancer","Head & neck","👄"],["Hypopharyngeal cancer","Head & neck","👄"],
+["Thyroid cancer","Endocrine system","🦋"],["Parathyroid cancer","Endocrine system","🦋"],["Adrenocortical cancer","Endocrine system","🦋"],["Pheochromocytoma and paraganglioma","Endocrine system","🦋"],["Pituitary tumours","Endocrine system","🦋"],
+["Neuroblastoma","Childhood cancers","🧒"],["Wilms tumour","Childhood cancers","🧒"],["Childhood leukaemia","Childhood cancers","🧒"],["Childhood brain and CNS tumours","Childhood cancers","🧒"],["Childhood bone and soft tissue cancers","Childhood cancers","🧒"],["Childhood germ cell tumours","Childhood cancers","🧒"],["Rare childhood cancers","Childhood cancers","🧒"],
+["Carcinoma of unknown primary","Other cancer topics","🔎"],["Metastatic cancer","Other cancer topics","🔎"],["Recurrent cancer","Other cancer topics","🔎"],["Cancer during pregnancy","Other cancer topics","🔎"],["AIDS-related cancers","Other cancer topics","🔎"],["Rare cancers","Other cancer topics","🔎"]
+];
+const search=document.getElementById('search'),category=document.getElementById('category'),grid=document.getElementById('grid'),count=document.getElementById('count'),empty=document.getElementById('empty');
+[...new Set(cancers.map(c=>c[1]))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;category.appendChild(o)});
+function render(){const q=search.value.trim().toLowerCase(),cat=category.value;const list=cancers.filter(c=>c[0].toLowerCase().includes(q)&&(!cat||c[1]===cat));grid.innerHTML=list.map(c=>`<article class="card"><div class="cardtop"><div class="icon" aria-hidden="true">${c[2]}</div><div><h3>${c[0]}</h3><div class="category">${c[1]}</div></div></div><p>Planned illustrated guide: anatomy, relevant tests and procedures, staging, treatment options and supportive care.</p><div class="status">Detailed guide in development</div></article>`).join('');count.textContent=`Showing ${list.length} of ${cancers.length} listings`;empty.style.display=list.length?'none':'block'}
+search.addEventListener('input',render);category.addEventListener('change',render);render();
+</script></body></html>
