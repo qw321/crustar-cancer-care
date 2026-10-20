@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Lung Cancer Tests & Procedures | CRUSTAR CARE</title>
+
+<meta name="description" content="Comprehensive educational guide to tests and procedures used in the evaluation, diagnosis, staging and follow-up of lung cancer.">
+
+<style>
+:root{
+--g:#062f2d;
+--g2:#0b4541;
+--gold:#d4af37;
+--bg:#f7f5ef;
+--ink:#17302f;
+--muted:#61716e;
+--line:#dce4df;
+--white:#fff;
+--soft:#edf4f0;
+--warn:#fff9e6;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:var(--ink);
+line-height:1.65;
+}
+
+header{
+background:var(--g);
+color:#fff;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.brand{
+font-size:1.5rem;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.brand span{color:var(--gold)}
+
+.tagline{
+font-size:.78rem;
+color:#dbe7e1;
+}
+
+.back{
+color:#fff;
+text-decoration:none;
+border:1px solid rgba(255,255,255,.35);
+padding:9px 14px;
+border-radius:22px;
+font-size:.85rem;
+}
+
+.back:hover{
+background:rgba(255,255,255,.1);
+}
+
+.hero{
+background:linear-gradient(135deg,var(--g),var(--g2));
+color:#fff;
+padding:55px 5%;
+}
+
+.hero-inner{
+max-width:1100px;
+margin:auto;
+}
+
+.eyebrow{
+color:var(--gold);
+font-weight:700;
+letter-spacing:1.5px;
+font-size:.8rem;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-size:clamp(2rem,5vw,3.5rem);
+line-height:1.1;
+margin:10px 0 15px;
+}
+
+.hero p{
+max-width:900px;
+color:#e2ece7;
+margin:8px 0;
+}
+
+main{
+max-width:1150px;
+margin:auto;
+padding:30px 5% 60px;
+}
+
+.toc{
+background:#fff;
+border:1px solid var(--line);
+border-radius:16px;
+padding:22px;
+margin-bottom:25px;
+}
+
+.toc h2{
+margin:0 0 12px;
+color:var(--g);
+font-size:1.25rem;
+}
+
+.toc-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+}
+
+.toc a{
+color:var(--g);
+text-decoration:none;
+font-size:.9rem;
+padding:7px 9px;
+border-radius:8px;
+}
+
+.toc a:hover{
+background:var(--soft);
+}
+
+.notice{
+background:var(--warn);
+border-left:4px solid var(--gold);
+padding:17px 20px;
+border-radius:8px;
+margin-bottom:28px;
+font-size:.92rem;
+}
+
+.section{
+background:#fff;
+border:1px solid var(--line);
+border-radius:17px;
+padding:25px;
+margin:20px 0;
+scroll-margin-top:20px;
+}
+
+.section h2{
+color:var(--g);
+margin:0 0 10px;
+font-size:1.45rem;
+}
+
+.section h3{
+color:var(--g2);
+margin:20px 0 7px;
+font-size:1.05rem;
+}
+
+.section p{
+color:#51625e;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:14px;
+}
+
+.card{
+background:#f9fbfa;
+border:1px solid var(--line);
+border-radius:13px;
+padding:16px;
+}
+
+.card h3{
+margin:0 0 6px;
+font-size:1rem;
+}
+
+.card p{
+margin:0;
+font-size:.9rem;
+}
+
+ul{
+color:#51625e;
+padding-left:22px;
+}
+
+li{
+margin:5px 0;
+}
+
+.badge{
+display:inline-block;
+font-size:.72rem;
+font-weight:700;
+padding:4px 8px;
+border-radius:20px;
+background:#eaf2ee;
+color:var(--g);
+margin-bottom:7px;
+}
+
+.table-wrap{
+overflow-x:auto;
+margin-top:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:650px;
+}
+
+th,td{
+border:1px solid var(--line);
+padding:11px;
+text-align:left;
+vertical-align:top;
+font-size:.88rem;
+}
+
+th{
+background:var(--g);
+color:#fff;
+}
+
+td{
+background:#fff;
+color:#51625e;
+}
+
+.callout{
+background:var(--soft);
+border-left:4px solid var(--g2);
+padding:15px 18px;
+border-radius:8px;
+margin:15px 0;
+}
+
+.gold-callout{
+background:#fbf4d9;
+border-left:4px solid var(--gold);
+padding:15px 18px;
+border-radius:8px;
+margin:15px 0;
+}
+
+footer{
+background:#041f1e;
+color:#dbe7e1;
+text-align:center;
+padding:25px 5%;
+font-size:.85rem;
+}
+
+footer strong{
+color:var(--gold);
+}
+
+@media(max-width:850px){
+.toc-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:540px){
+.toc-grid{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+align-items:flex-start;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div>
+<div class="brand">CRUSTAR <span>CARE</span></div>
+<div class="tagline">From the first doubt to the entire journey.</div>
+</div>
+
+<a class="back" href="tests-procedures.html">← Tests &amp; Procedures Library</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="eyebrow">Cancer-specific investigation guide</div>
+
+<h1>Lung Cancer<br>Tests &amp; Procedures</h1>
+
+<p>
+A comprehensive educational reference covering investigations that may be used when lung cancer is suspected, diagnosed, staged or followed over time.
+</p>
+
+<p>
+The appropriate tests depend on the clinical situation, suspected cancer type, location of an abnormality, stage, overall health and the information the medical team needs.
+</p>
+
+</div>
+
+</section>
+
+<main>
+
+<div class="notice">
+<strong>Important:</strong>
+This page explains tests and procedures only. It does not diagnose lung cancer and does not tell an individual patient which tests they personally need. Investigation plans must be determined and interpreted by qualified healthcare professionals.
+</div>
+
+<nav class="toc">
+
+<h2>On this page</h2>
+
+<div class="toc-grid">
+
+<a href="#clinical">1. Clinical assessment</a>
+<a href="#screening">2. Screening</a>
+<a href="#blood">3. Blood tests</a>
+<a href="#urine">4. Urine tests</a>
+<a href="#fluids">5. Body-fluid tests</a>
+<a href="#imaging">6. Imaging</a>
+<a href="#endoscopy">7. Endoscopy</a>
+<a href="#biopsy">8. Biopsy & sampling</a>
+<a href="#pathology">9. Pathology</a>
+<a href="#molecular">10. Molecular testing</a>
+<a href="#genetic">11. Inherited genetics</a>
+<a href="#bloodcancer">12. Blood-cancer investigations</a>
+<a href="#staging">13. Staging investigations</a>
+<a href="#pretreatment">14. Pre-treatment investigations</a>
+<a href="#response">15. Response monitoring</a>
+<a href="#followup">16. Recurrence & follow-up</a>
+<a href="#specialist">17. Specialist & advanced procedures</a>
+
+</div>
+
+</nav>
+
+<section class="section" id="clinical">
+
+<h2>1. Clinical Assessment</h2>
+
+<p>
+Evaluation normally begins by understanding symptoms, medical history and examination findings. These findings help determine which investigations may be appropriate.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<span class="badge">Clinical</span>
+<h3>Medical history</h3>
+<p>Symptoms, duration, smoking history, occupational exposures, previous illnesses, previous cancers and relevant family history may be reviewed.</p>
+</div>
+
+<div class="card">
+<span class="badge">Clinical</span>
+<h3>Respiratory assessment</h3>
+<p>Breathing symptoms, cough, sputum, coughing blood, chest discomfort and other respiratory findings may be assessed.</p>
+</div>
+
+<div class="card">
+<span class="badge">Examination</span>
+<h3>Physical examination</h3>
+<p>The clinician may examine the chest, lymph nodes, abdomen, skin and other systems depending on symptoms and findings.</p>
+</div>
+
+<div class="card">
+<span class="badge">Functional</span>
+<h3>Performance / functional assessment</h3>
+<p>General functional status and ability to perform normal activities may be documented.</p>
+</div>
+
+<div class="card">
+<span class="badge">Measurements</span>
+<h3>Vital signs</h3>
+<p>Blood pressure, pulse, respiratory rate, oxygen saturation and temperature may be measured.</p>
+</div>
+
+<div class="card">
+<span class="badge">Risk assessment</span>
+<h3>Exposure assessment</h3>
+<p>Smoking, second-hand smoke, occupational exposures, environmental exposures and relevant previous treatments may be reviewed.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="screening">
+
+<h2>2. Screening</h2>
+
+<p>
+Lung-cancer screening is different from investigating symptoms. Screening is intended for selected people at sufficiently increased risk according to applicable guidelines and eligibility criteria.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Low-dose CT (LDCT)</h3>
+<p>Low-dose CT is the principal imaging test used in established lung-cancer screening programmes for eligible higher-risk populations.</p>
+</div>
+
+<div class="card">
+<h3>Screening eligibility assessment</h3>
+<p>Age, smoking exposure and other risk factors may be assessed according to the screening programme being used.</p>
+</div>
+
+<div class="card">
+<h3>High-risk surveillance</h3>
+<p>People with particular inherited or clinical risk factors may have individualized surveillance plans.</p>
+</div>
+
+<div class="card">
+<h3>Follow-up of screening findings</h3>
+<p>An abnormal screening result may lead to diagnostic imaging or other investigations. A screening abnormality is not automatically a cancer diagnosis.</p>
+</div>
+
+</div>
+
+<div class="gold-callout">
+<strong>Screening is not diagnosis.</strong>
+A diagnostic evaluation may be required when symptoms or an abnormal screening result are present.
+</div>
+
+</section>
+
+<section class="section" id="blood">
+
+<h2>3. Blood Tests</h2>
+
+<p>
+Routine blood tests generally do not establish a diagnosis of lung cancer by themselves. They can provide information about general health, organ function, complications and readiness for procedures or treatment.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Complete blood count (CBC/FBC)</h3>
+<p>Measures red cells, white cells and platelets.</p>
+</div>
+
+<div class="card">
+<h3>White-cell differential</h3>
+<p>Provides information about different white-cell populations.</p>
+</div>
+
+<div class="card">
+<h3>Peripheral blood smear</h3>
+<p>Microscopic examination of blood cells when clinically indicated.</p>
+</div>
+
+<div class="card">
+<h3>Kidney function</h3>
+<p>Creatinine, eGFR, urea and related measurements may be assessed.</p>
+</div>
+
+<div class="card">
+<h3>Liver function</h3>
+<p>Selected liver enzymes, bilirubin, albumin and other measurements may be assessed.</p>
+</div>
+
+<div class="card">
+<h3>Electrolytes</h3>
+<p>Sodium, potassium and other electrolytes may be measured.</p>
+</div>
+
+<div class="card">
+<h3>Calcium</h3>
+<p>Calcium may be checked, particularly when clinically relevant to symptoms or disease extent.</p>
+</div>
+
+<div class="card">
+<h3>Magnesium & phosphate</h3>
+<p>May be measured when clinically indicated.</p>
+</div>
+
+<div class="card">
+<h3>Glucose / HbA1c</h3>
+<p>May be checked as part of general medical assessment.</p>
+</div>
+
+<div class="card">
+<h3>LDH</h3>
+<p>May provide additional clinical information but is not a stand-alone diagnostic test for lung cancer.</p>
+</div>
+
+<div class="card">
+<h3>CRP / ESR</h3>
+<p>Markers of inflammation that may be used when clinically relevant.</p>
+</div>
+
+<div class="card">
+<h3>Coagulation tests</h3>
+<p>PT/INR, aPTT and related tests may be required before selected procedures or when bleeding risk is relevant.</p>
+</div>
+
+<div class="card">
+<h3>Blood group & crossmatch</h3>
+<p>May be required when an invasive procedure or surgery could involve significant blood loss.</p>
+</div>
+
+<div class="card">
+<h3>Infection-related tests</h3>
+<p>Hepatitis B/C, HIV or other infection testing may be performed when clinically or procedurally indicated.</p>
+</div>
+
+<div class="card">
+<h3>Pregnancy testing</h3>
+<p>May be relevant before selected imaging, procedures or treatments in people who could be pregnant.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="urine">
+
+<h2>4. Urine Tests</h2>
+
+<p>
+Urine investigations are not usually the primary tests used to diagnose a lung tumour, but may be performed for general health assessment, symptoms, infection or preparation for procedures.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Urinalysis</h3>
+<p>General urine assessment when clinically indicated.</p>
+</div>
+
+<div class="card">
+<h3>Urine microscopy</h3>
+<p>Microscopic examination for cells and other findings.</p>
+</div>
+
+<div class="card">
+<h3>Urine culture</h3>
+<p>May be used when urinary infection is suspected.</p>
+</div>
+
+<div class="card">
+<h3>Specialized urine testing</h3>
+<p>Additional assays may be ordered for specific medical questions unrelated or indirectly related to the lung tumour.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="fluids">
+
+<h2>5. Other Body-Fluid Tests</h2>
+
+<p>
+If lung cancer is associated with fluid around the lung or elsewhere, fluid may be sampled and examined.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Pleural-fluid analysis</h3>
+<p>Fluid from around the lung may be analyzed for cells, chemistry and other findings.</p>
+</div>
+
+<div class="card">
+<h3>Pleural-fluid cytology</h3>
+<p>Cells in pleural fluid may be examined for malignant cells.</p>
+</div>
+
+<div class="card">
+<h3>Thoracentesis</h3>
+<p>A procedure used to remove pleural fluid for diagnostic testing or other clinical purposes.</p>
+</div>
+
+<div class="card">
+<h3>Pericardial-fluid testing</h3>
+<p>If fluid surrounds the heart, selected cases may require analysis of pericardial fluid.</p>
+</div>
+
+<div class="card">
+<h3>CSF testing</h3>
+<p>Cerebrospinal-fluid examination may be considered in selected situations involving the nervous system.</p>
+</div>
+
+<div class="card">
+<h3>Microbiology of fluid samples</h3>
+<p>When infection is part of the differential diagnosis, fluid may undergo microbiological testing.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="imaging">
+
+<h2>6. Imaging</h2>
+
+<p>
+Imaging can help identify suspicious lung abnormalities, characterize lesions, assess lymph nodes, look for spread and monitor changes over time.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Chest X-ray</h3>
+<p>Provides a broad view of the chest and may reveal an abnormal area requiring further investigation.</p>
+</div>
+
+<div class="card">
+<h3>Diagnostic chest CT</h3>
+<p>Provides detailed cross-sectional images of the lungs, mediastinum, lymph nodes and nearby structures.</p>
+</div>
+
+<div class="card">
+<h3>Contrast-enhanced CT</h3>
+<p>Contrast may improve assessment of selected structures and clinical questions.</p>
+</div>
+
+<div class="card">
+<h3>Thin-section CT</h3>
+<p>High-resolution or thin-section imaging can provide detailed assessment of pulmonary abnormalities.</p>
+</div>
+
+<div class="card">
+<h3>CT chest-abdomen-pelvis</h3>
+<p>May be used to evaluate the primary tumour and possible disease outside the chest.</p>
+</div>
+
+<div class="card">
+<h3>CT-guided biopsy</h3>
+<p>CT imaging may guide a needle toward a suitable peripheral lung lesion or other target.</p>
+</div>
+
+<div class="card">
+<h3>PET-CT</h3>
+<p>Combines metabolic information with CT anatomy and can help assess the extent of disease.</p>
+</div>
+
+<div class="card">
+<h3>PET-MRI</h3>
+<p>Combines PET information with MRI and may be used in selected clinical settings.</p>
+</div>
+
+<div class="card">
+<h3>Brain MRI</h3>
+<p>May be used to assess the brain for possible metastatic disease when clinically indicated.</p>
+</div>
+
+<div class="card">
+<h3>Brain CT</h3>
+<p>May be used when MRI is unavailable, unsuitable or when urgent assessment is needed.</p>
+</div>
+
+<div class="card">
+<h3>Bone scan</h3>
+<p>Nuclear medicine imaging that may be used to evaluate suspected bone involvement in selected circumstances.</p>
+</div>
+
+<div class="card">
+<h3>SPECT / SPECT-CT</h3>
+<p>Specialized nuclear imaging may be used for selected diagnostic questions.</p>
+</div>
+
+<div class="card">
+<h3>Ultrasound</h3>
+<p>May assess accessible lymph nodes, pleural fluid, liver lesions or other structures.</p>
+</div>
+
+<div class="card">
+<h3>Doppler ultrasound</h3>
+<p>May assess blood vessels when vascular questions arise.</p>
+</div>
+
+<div class="card">
+<h3>Thoracic ultrasound</h3>
+<p>Can help assess pleural fluid and guide selected procedures.</p>
+</div>
+
+<div class="card">
+<h3>Fluoroscopy</h3>
+<p>Real-time X-ray imaging can be used in selected procedures including image-guided sampling.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="endoscopy">
+
+<h2>7. Endoscopy</h2>
+
+<p>
+Endoscopic procedures can directly inspect the airways or nearby structures and may allow tissue, cell or fluid sampling.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Flexible bronchoscopy</h3>
+<p>A camera-equipped scope is passed into the airways to inspect abnormal areas and obtain samples.</p>
+</div>
+
+<div class="card">
+<h3>Rigid bronchoscopy</h3>
+<p>A larger rigid scope may be used for selected diagnostic or interventional airway procedures.</p>
+</div>
+
+<div class="card">
+<h3>Bronchial biopsy</h3>
+<p>Tissue may be collected from an abnormal area inside the airways.</p>
+</div>
+
+<div class="card">
+<h3>Bronchial brushing</h3>
+<p>A brush may collect cells from the airway surface for cytological examination.</p>
+</div>
+
+<div class="card">
+<h3>Bronchial washing</h3>
+<p>Fluid introduced into the airways may be collected for cellular or microbiological analysis.</p>
+</div>
+
+<div class="card">
+<h3>Bronchoalveolar lavage (BAL)</h3>
+<p>A lavage sample may be collected during bronchoscopy for selected diagnostic questions.</p>
+</div>
+
+<div class="card">
+<h3>Endobronchial ultrasound (EBUS)</h3>
+<p>Ultrasound attached to a bronchoscope can visualize structures and lymph nodes around the airways.</p>
+</div>
+
+<div class="card">
+<h3>EBUS-TBNA</h3>
+<p>A needle can be passed through the airway wall to sample lymph nodes or other targets.</p>
+</div>
+
+<div class="card">
+<h3>Endoscopic oesophageal ultrasound (EUS)</h3>
+<p>An ultrasound endoscope through the oesophagus can visualize nearby lymph nodes and permit needle sampling in selected cases.</p>
+</div>
+
+<div class="card">
+<h3>Navigation bronchoscopy</h3>
+<p>Computer-assisted or electromagnetic navigation may help reach selected peripheral lung lesions.</p>
+</div>
+
+<div class="card">
+<h3>Robotic-assisted bronchoscopy</h3>
+<p>Robotic navigation may be used in selected centres for sampling peripheral lung lesions.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="biopsy">
+
+<h2>8. Biopsy &amp; Sampling Procedures</h2>
+
+<p>
+A tissue or cell sample is often required to establish the diagnosis and classify the tumour. The safest and most useful sampling method depends on where the abnormality is located.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Fine-needle aspiration (FNA)</h3>
+<p>A thin needle obtains cells or small fragments of tissue.</p>
+</div>
+
+<div class="card">
+<h3>Core needle biopsy</h3>
+<p>A larger needle obtains cylinders of tissue that can provide more material for pathology and biomarker testing.</p>
+</div>
+
+<div class="card">
+<h3>Transthoracic needle biopsy</h3>
+<p>A needle is passed through the chest wall into a suitable lung lesion, often with CT guidance.</p>
+</div>
+
+<div class="card">
+<h3>CT-guided lung biopsy</h3>
+<p>CT imaging helps guide the biopsy needle toward a selected lesion.</p>
+</div>
+
+<div class="card">
+<h3>Transbronchial biopsy</h3>
+<p>Tissue is obtained through a bronchoscope.</p>
+</div>
+
+<div class="card">
+<h3>Transbronchial needle aspiration</h3>
+<p>Needle sampling through the bronchial wall can obtain cells from selected lymph nodes or lesions.</p>
+</div>
+
+<div class="card">
+<h3>EBUS-guided lymph-node sampling</h3>
+<p>EBUS can guide sampling of mediastinal and hilar lymph nodes.</p>
+</div>
+
+<div class="card">
+<h3>EUS-guided needle sampling</h3>
+<p>Selected lymph nodes or nearby structures can be sampled through the oesophagus.</p>
+</div>
+
+<div class="card">
+<h3>Mediastinoscopy</h3>
+<p>A surgical procedure can directly examine and sample selected mediastinal lymph nodes.</p>
+</div>
+
+<div class="card">
+<h3>Mediastinotomy</h3>
+<p>An alternative surgical approach may be used to access selected mediastinal structures when necessary.</p>
+</div>
+
+<div class="card">
+<h3>Thoracoscopy</h3>
+<p>Can inspect the pleural space and obtain tissue or fluid samples.</p>
+</div>
+
+<div class="card">
+<h3>VATS sampling</h3>
+<p>Video-assisted thoracic surgery may provide access to selected lung, pleural or lymph-node targets.</p>
+</div>
+
+<div class="card">
+<h3>Metastatic-site biopsy</h3>
+<p>If disease has spread, a safer or more informative accessible metastatic site may sometimes be sampled.</p>
+</div>
+
+<div class="card">
+<h3>Pleural biopsy</h3>
+<p>Selected pleural abnormalities can be sampled when pleural involvement is suspected.</p>
+</div>
+
+<div class="card">
+<h3>Surgical specimen</h3>
+<p>If a lung lesion is removed surgically, the specimen undergoes detailed pathological examination.</p>
+</div>
+
+<div class="card">
+<h3>Sputum cytology</h3>
+<p>Coughed-up sputum can be examined for abnormal cells. It is not sufficient for every suspected lung cancer.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="pathology">
+
+<h2>9. Pathology</h2>
+
+<p>
+Pathology examines tissue, cells or other samples to establish and classify the diagnosis. The pathology report may distinguish primary lung cancer from cancer that has spread to the lung from another organ.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Histopathology</h3>
+<p>Microscopic examination of tissue architecture and tumour cells.</p>
+</div>
+
+<div class="card">
+<h3>Cytopathology</h3>
+<p>Microscopic examination of individual cells or small cell groups from fluid or needle samples.</p>
+</div>
+
+<div class="card">
+<h3>Histologic classification</h3>
+<p>Determines the type and subtype of lung cancer where possible.</p>
+</div>
+
+<div class="card">
+<h3>Immunohistochemistry (IHC)</h3>
+<p>Uses antibodies to detect proteins that help classify the tumour and distinguish possible origins.</p>
+</div>
+
+<div class="card">
+<h3>Special stains</h3>
+<p>Selected stains may provide additional information about tumour characteristics or differential diagnoses.</p>
+</div>
+
+<div class="card">
+<h3>PD-L1 immunohistochemistry</h3>
+<p>Measures PD-L1 expression using an appropriate validated assay when relevant to clinical decision-making.</p>
+</div>
+
+<div class="card">
+<h3>Ki-67 / proliferation assessment</h3>
+<p>May be used in selected tumour types or differential diagnoses.</p>
+</div>
+
+<div class="card">
+<h3>Flow cytometry</h3>
+<p>May be useful when a lymphoid or hematologic malignancy is part of the differential diagnosis.</p>
+</div>
+
+<div class="card">
+<h3>Pathology review</h3>
+<p>Expert review of existing slides or tissue may be requested when diagnosis or classification is uncertain.</p>
+</div>
+
+<div class="card">
+<h3>Margin assessment</h3>
+<p>Surgical specimens may be examined to determine whether tumour extends to a resection margin.</p>
+</div>
+
+<div class="card">
+<h3>Lymph-node assessment</h3>
+<p>Sampled or removed lymph nodes can be examined for tumour involvement.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="molecular">
+
+<h2>10. Molecular &amp; Genomic Testing</h2>
+
+<p>
+Molecular testing is particularly important in many non-small cell lung cancers. Testing may examine tumour tissue, blood or another appropriate specimen.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Single-gene testing</h3>
+<p>A specific gene alteration may be tested when appropriate.</p>
+</div>
+
+<div class="card">
+<h3>Multigene panel</h3>
+<p>Multiple genes can be assessed simultaneously to identify clinically relevant alterations.</p>
+</div>
+
+<div class="card">
+<h3>Next-generation sequencing (NGS)</h3>
+<p>NGS can evaluate multiple genomic alterations from a tumour specimen or, in selected circumstances, blood.</p>
+</div>
+
+<div class="card">
+<h3>DNA sequencing</h3>
+<p>Can identify selected mutations and other genomic changes.</p>
+</div>
+
+<div class="card">
+<h3>RNA sequencing</h3>
+<p>Can help identify RNA-level alterations including some gene fusions.</p>
+</div>
+
+<div class="card">
+<h3>Fusion testing</h3>
+<p>May detect clinically relevant gene rearrangements or fusions.</p>
+</div>
+
+<div class="card">
+<h3>FISH</h3>
+<p>Fluorescence in situ hybridization can detect selected gene rearrangements or copy-number abnormalities.</p>
+</div>
+
+<div class="card">
+<h3>PCR-based testing</h3>
+<p>PCR can be used for specific mutations, fusions or other molecular targets.</p>
+</div>
+
+<div class="card">
+<h3>Copy-number analysis</h3>
+<p>Can assess selected gene amplifications or deletions.</p>
+</div>
+
+<div class="card">
+<h3>Microsatellite instability (MSI)</h3>
+<p>May be assessed in selected tumours where clinically relevant.</p>
+</div>
+
+<div class="card">
+<h3>Mismatch-repair (MMR)</h3>
+<p>MMR proteins may be evaluated using appropriate molecular or IHC methods in selected settings.</p>
+</div>
+
+<div class="card">
+<h3>Tumour mutational burden (TMB)</h3>
+<p>A genomic measure that may be available through comprehensive molecular profiling in selected settings.</p>
+</div>
+
+<div class="card">
+<h3>Liquid biopsy</h3>
+<p>Blood can be analyzed for tumour-derived DNA or other tumour-related material.</p>
+</div>
+
+<div class="card">
+<h3>Circulating tumour DNA (ctDNA)</h3>
+<p>Fragments of tumour-derived DNA in blood may be analyzed for selected genomic alterations.</p>
+</div>
+
+<div class="card">
+<h3>PD-L1 testing</h3>
+<p>PD-L1 protein expression may be assessed by IHC in appropriate lung cancer settings.</p>
+</div>
+
+</div>
+
+<div class="gold-callout">
+<strong>Important:</strong>
+The exact molecular panel should not be assumed from this list. Testing depends on the lung-cancer subtype, stage, specimen quality, laboratory methods and applicable clinical guidelines.
+</div>
+
+</section>
+
+<section class="section" id="genetic">
+
+<h2>11. Inherited / Germline Genetic Testing</h2>
+
+<p>
+Inherited genetic testing is different from testing the tumour itself. It may be considered when personal or family history suggests a hereditary cancer syndrome or when a specialist considers germline testing appropriate.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Genetic counselling</h3>
+<p>Assessment of personal and family history before or alongside germline testing.</p>
+</div>
+
+<div class="card">
+<h3>Germline testing</h3>
+<p>Examines inherited DNA, usually from blood or another validated sample.</p>
+</div>
+
+<div class="card">
+<h3>Hereditary cancer panel</h3>
+<p>Multiple inherited cancer-associated genes may be tested together when appropriate.</p>
+</div>
+
+<div class="card">
+<h3>Family / cascade testing</h3>
+<p>Testing of relatives may be considered when a clinically important inherited variant has been identified.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="bloodcancer">
+
+<h2>12. Blood-Cancer Investigations</h2>
+
+<p>
+A lung or mediastinal mass can sometimes represent lymphoma, leukemia-related disease or another hematologic malignancy rather than a primary lung carcinoma. Additional blood or tissue investigations may therefore be needed in selected cases.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Peripheral blood smear</h3>
+<p>Microscopic evaluation of blood cells.</p>
+</div>
+
+<div class="card">
+<h3>Bone-marrow aspiration</h3>
+<p>May be performed when a hematologic malignancy or marrow involvement is suspected.</p>
+</div>
+
+<div class="card">
+<h3>Bone-marrow biopsy</h3>
+<p>Provides tissue architecture for selected hematologic investigations.</p>
+</div>
+
+<div class="card">
+<h3>Flow cytometry</h3>
+<p>Can characterize abnormal blood or tissue cell populations.</p>
+</div>
+
+<div class="card">
+<h3>Immunophenotyping</h3>
+<p>Uses cell-surface or intracellular markers to help classify abnormal cells.</p>
+</div>
+
+<div class="card">
+<h3>Cytogenetics</h3>
+<p>Chromosome analysis may be performed in selected hematologic conditions.</p>
+</div>
+
+<div class="card">
+<h3>FISH</h3>
+<p>Can detect selected chromosomal or gene abnormalities.</p>
+</div>
+
+<div class="card">
+<h3>Molecular hematology testing</h3>
+<p>Selected molecular tests may be performed if a blood malignancy is suspected.</p>
+</div>
+
+<div class="card">
+<h3>Minimal residual disease testing</h3>
+<p>MRD testing may be relevant when a hematologic malignancy has been diagnosed.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="staging">
+
+<h2>13. Staging Investigations</h2>
+
+<p>
+After lung cancer is diagnosed, additional investigations may determine how extensive the disease is. For NSCLC, staging commonly uses the TNM system. SCLC may also be described using limited-stage and extensive-stage groupings.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Staging question</th>
+<th>Possible investigations</th>
+<th>Purpose</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Primary tumour</td>
+<td>Chest CT, contrast CT, MRI in selected circumstances</td>
+<td>Assess tumour size, location and local relationships.</td>
+</tr>
+
+<tr>
+<td>Regional lymph nodes</td>
+<td>CT, PET-CT, EBUS-TBNA, EUS-FNA, mediastinoscopy</td>
+<td>Assess whether regional nodes contain cancer.</td>
+</tr>
+
+<tr>
+<td>Brain</td>
+<td>Brain MRI or CT when appropriate</td>
+<td>Assess possible intracranial spread.</td>
+</tr>
+
+<tr>
+<td>Bones</td>
+<td>PET-CT, bone scan or targeted imaging</td>
+<td>Assess suspected bone involvement.</td>
+</tr>
+
+<tr>
+<td>Liver/adrenal/abdominal organs</td>
+<td>CT, MRI, PET-CT or ultrasound when appropriate</td>
+<td>Assess possible distant disease.</td>
+</tr>
+
+<tr>
+<td>Pleura</td>
+<td>CT, PET-CT, thoracentesis, pleural cytology or biopsy</td>
+<td>Assess possible pleural involvement.</td>
+</tr>
+
+<tr>
+<td>Distant lesions</td>
+<td>Targeted imaging and/or biopsy</td>
+<td>Confirm or characterize suspected metastatic disease when needed.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<section class="section" id="pretreatment">
+
+<h2>14. Pre-Treatment / Pre-Procedure Investigations</h2>
+
+<p>
+Some investigations are performed to establish baseline health, assess procedural risk or determine whether an intervention can be safely performed.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Complete blood count</h3>
+<p>Baseline blood-cell measurements.</p>
+</div>
+
+<div class="card">
+<h3>Kidney function</h3>
+<p>Important when assessing overall health and selected procedures or contrast-related considerations.</p>
+</div>
+
+<div class="card">
+<h3>Liver function</h3>
+<p>Baseline organ-function assessment.</p>
+</div>
+
+<div class="card">
+<h3>Coagulation profile</h3>
+<p>May be needed before selected invasive procedures.</p>
+</div>
+
+<div class="card">
+<h3>ECG</h3>
+<p>May assess cardiac rhythm and baseline cardiac status.</p>
+</div>
+
+<div class="card">
+<h3>Echocardiogram</h3>
+<p>May be performed when cardiac function needs assessment.</p>
+</div>
+
+<div class="card">
+<h3>Pulmonary-function tests</h3>
+<p>May be particularly important when lung surgery is being considered.</p>
+</div>
+
+<div class="card">
+<h3>Spirometry</h3>
+<p>Measures airflow and is a component of pulmonary-function assessment.</p>
+</div>
+
+<div class="card">
+<h3>DLCO</h3>
+<p>Measures the lung's ability to transfer gas and may contribute to assessment before lung surgery.</p>
+</div>
+
+<div class="card">
+<h3>Arterial blood gas</h3>
+<p>Measures oxygen, carbon dioxide and acid-base status in selected circumstances.</p>
+</div>
+
+<div class="card">
+<h3>Anaesthesia assessment</h3>
+<p>Pre-procedure evaluation may assess airway, cardiac, respiratory and other risks.</p>
+</div>
+
+<div class="card">
+<h3>Pregnancy testing</h3>
+<p>May be required where pregnancy is possible and relevant to the planned investigation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="response">
+
+<h2>15. Treatment-Response Monitoring Tests</h2>
+
+<p>
+Although this page does not cover treatment itself, tests may be used to determine whether disease is changing after treatment has begun.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Repeat CT</h3>
+<p>Can compare tumour and lymph-node findings with previous imaging.</p>
+</div>
+
+<div class="card">
+<h3>Repeat PET-CT</h3>
+<p>May be used in selected circumstances to assess metabolic changes.</p>
+</div>
+
+<div class="card">
+<h3>Repeat MRI</h3>
+<p>May monitor previously identified brain or other lesions.</p>
+</div>
+
+<div class="card">
+<h3>Repeat blood tests</h3>
+<p>Can monitor blood counts, kidney function, liver function and other relevant parameters.</p>
+</div>
+
+<div class="card">
+<h3>Repeat molecular testing</h3>
+<p>May be considered when disease changes and new molecular information is clinically useful.</p>
+</div>
+
+<div class="card">
+<h3>ctDNA testing</h3>
+<p>Blood-based molecular testing may be used in selected clinical settings.</p>
+</div>
+
+<div class="card">
+<h3>Biopsy of a changing lesion</h3>
+<p>A new or changing lesion may sometimes require tissue confirmation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="followup">
+
+<h2>16. Recurrence &amp; Follow-Up Investigations</h2>
+
+<p>
+After initial treatment, surveillance plans vary according to cancer type, stage, treatment history and clinical circumstances.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Clinical follow-up</h3>
+<p>History, symptoms and physical examination may be reviewed periodically.</p>
+</div>
+
+<div class="card">
+<h3>Surveillance CT</h3>
+<p>CT may be used at intervals determined by the clinical team.</p>
+</div>
+
+<div class="card">
+<h3>Chest imaging</h3>
+<p>Additional chest imaging may be used when clinically appropriate.</p>
+</div>
+
+<div class="card">
+<h3>PET-CT</h3>
+<p>May be used for selected questions rather than as a universal routine surveillance test.</p>
+</div>
+
+<div class="card">
+<h3>Brain imaging</h3>
+<p>May be repeated when symptoms or prior disease make brain assessment clinically relevant.</p>
+</div>
+
+<div class="card">
+<h3>Repeat biopsy</h3>
+<p>A suspicious new or recurrent lesion may require tissue sampling.</p>
+</div>
+
+<div class="card">
+<h3>Repeat molecular profiling</h3>
+<p>May be considered when a new tissue sample is obtained and molecular information could affect clinical decisions.</p>
+</div>
+
+<div class="card">
+<h3>Laboratory monitoring</h3>
+<p>Blood tests may be performed based on symptoms, treatment history and overall health.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="specialist">
+
+<h2>17. Specialist &amp; Advanced Investigations / Procedures</h2>
+
+<p>
+Some investigations are performed only in selected patients or specialist centres.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Electromagnetic navigation bronchoscopy</h3>
+<p>Computer-assisted navigation may help reach selected peripheral pulmonary lesions.</p>
+</div>
+
+<div class="card">
+<h3>Robotic-assisted bronchoscopy</h3>
+<p>Robotic platforms may assist selected peripheral lesion sampling.</p>
+</div>
+
+<div class="card">
+<h3>Advanced EBUS</h3>
+<p>Specialist EBUS techniques may be used for detailed mediastinal or hilar assessment.</p>
+</div>
+
+<div class="card">
+<h3>Rapid onsite cytologic evaluation (ROSE)</h3>
+<p>In selected centres, a preliminary specimen assessment can help determine whether material appears adequate for the planned analysis.</p>
+</div>
+
+<div class="card">
+<h3>Thoracoscopy / VATS</h3>
+<p>Can provide access to selected pleural, lung and lymph-node targets.</p>
+</div>
+
+<div class="card">
+<h3>Mediastinoscopy</h3>
+<p>Surgical access to selected mediastinal lymph nodes when less invasive sampling is insufficient or unsuitable.</p>
+</div>
+
+<div class="card">
+<h3>Expert pathology review</h3>
+<p>Specialist review may be requested when the diagnosis or tumour classification is uncertain.</p>
+</div>
+
+<div class="card">
+<h3>Comprehensive genomic profiling</h3>
+<p>Broad molecular profiling may be used in appropriate lung-cancer settings.</p>
+</div>
+
+<div class="card">
+<h3>Liquid-biopsy profiling</h3>
+<p>Blood-based tumour DNA analysis may provide molecular information when tissue is unavailable or insufficient in selected situations.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Important Interpretation Points</h2>
+
+<div class="callout">
+<strong>No single test diagnoses every lung cancer.</strong>
+A diagnosis may require a combination of clinical assessment, imaging, tissue or cell sampling and laboratory/pathology examination.
+</div>
+
+<div class="callout">
+<strong>Biopsy and pathology matter.</strong>
+Imaging can strongly suggest a lung tumour, but tissue or cell examination is often required to establish and classify the diagnosis.
+</div>
+
+<div class="callout">
+<strong>Not every patient needs every investigation.</strong>
+The investigation pathway depends on symptoms, imaging findings, tumour location, suspected subtype, stage and the patient's overall health.
+</div>
+
+<div class="callout">
+<strong>Molecular testing is not one single test.</strong>
+Different molecular methods and panels detect different alterations, and the appropriate testing strategy depends on the clinical setting and available validated assays.
+</div>
+
+<div class="gold-callout">
+<strong>Tests listed as “specialist”, “selected” or “advanced” are not routine requirements for everyone.</strong>
+Their inclusion means they are recognized tools that may be used in appropriate circumstances.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Sources &amp; Further Reading</h2>
+
+<ul>
+<li>National Cancer Institute — Tests and Procedures Used to Diagnose Cancer</li>
+<li>National Cancer Institute — Non-Small Cell Lung Cancer Treatment (PDQ)</li>
+<li>National Cancer Institute — Cancer Staging</li>
+<li>National Cancer Institute — Tumor Marker Tests in Common Use</li>
+<li>American Cancer Society — How Is Lung Cancer Diagnosed?</li>
+<li>American Cancer Society — Bronchoscopy</li>
+</ul>
+
+<p>
+Medical content should be reviewed and updated periodically as diagnostic technologies, laboratory methods and clinical guidelines evolve.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<strong>CRUSTAR CARE</strong> · In Memory of Er. Abdul Hai Khan<br>
+Educational resource project · Tests and procedures information is for education only.
+
+</footer>
+
+</body>
+</html>
