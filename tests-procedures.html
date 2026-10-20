@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tests & Procedures Library | CRUSTAR CARE</title>
+<meta name="description" content="CRUSTAR CARE cancer tests and procedures library covering screening, laboratory tests, imaging, biopsies, pathology, molecular testing, staging and follow-up investigations.">
+
+<style>
+:root{
+--g:#062f2d;
+--g2:#0b4541;
+--gold:#d4af37;
+--bg:#f7f5ef;
+--ink:#17302f;
+--muted:#61716e;
+--line:#dce4df;
+--white:#fff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:var(--ink);
+line-height:1.6;
+}
+
+header{
+background:var(--g);
+color:#fff;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.brand{
+font-size:1.5rem;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.brand span{color:var(--gold)}
+
+.tagline{
+font-size:.78rem;
+color:#dbe7e1;
+margin-top:2px;
+}
+
+.back{
+color:#fff;
+text-decoration:none;
+border:1px solid rgba(255,255,255,.35);
+padding:9px 14px;
+border-radius:22px;
+font-size:.85rem;
+}
+
+.back:hover{
+background:rgba(255,255,255,.1);
+}
+
+.hero{
+background:linear-gradient(135deg,var(--g),var(--g2));
+color:#fff;
+padding:55px 5%;
+}
+
+.hero-inner{
+max-width:1100px;
+margin:auto;
+}
+
+.eyebrow{
+color:var(--gold);
+font-weight:700;
+letter-spacing:1.5px;
+font-size:.8rem;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-size:clamp(2rem,5vw,3.5rem);
+margin:10px 0 15px;
+line-height:1.1;
+}
+
+.hero p{
+max-width:850px;
+color:#e2ece7;
+margin:8px 0;
+}
+
+main{
+max-width:1200px;
+margin:auto;
+padding:30px 5% 60px;
+}
+
+.notice{
+background:#fff9e6;
+border-left:4px solid var(--gold);
+padding:17px 20px;
+border-radius:8px;
+margin-bottom:30px;
+font-size:.92rem;
+}
+
+.master-library{
+margin:28px 0 40px;
+}
+
+.master-intro{
+background:#fff;
+border:1px solid var(--line);
+border-radius:16px;
+padding:22px;
+margin-bottom:18px;
+}
+
+.master-intro h2{
+margin:0 0 8px;
+color:var(--g);
+}
+
+.master-intro p{
+margin:7px 0;
+color:#51625e;
+}
+
+.test-groups{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:15px;
+}
+
+.test-group{
+background:#fff;
+border:1px solid var(--line);
+border-radius:15px;
+padding:18px;
+}
+
+.test-group h3{
+margin:0 0 10px;
+color:var(--g);
+font-size:1.05rem;
+}
+
+.test-group ul{
+margin:8px 0 0 18px;
+padding:0;
+color:#51625e;
+}
+
+.test-group li{
+margin:5px 0;
+}
+
+.toolbar{
+background:#fff;
+border:1px solid var(--line);
+padding:18px;
+border-radius:16px;
+display:grid;
+grid-template-columns:1.4fr 1fr;
+gap:14px;
+}
+
+input,select{
+width:100%;
+padding:13px 14px;
+border:1px solid #cbd7d1;
+border-radius:10px;
+background:#fff;
+font-size:1rem;
+color:var(--ink);
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+margin:28px 0 14px;
+}
+
+.row h2{
+margin:0;
+color:var(--g);
+font-size:1.4rem;
+}
+
+.count{
+font-size:.9rem;
+color:var(--muted);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:15px;
+}
+
+.card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:15px;
+padding:17px;
+min-height:190px;
+display:flex;
+flex-direction:column;
+}
+
+.cardtop{
+display:flex;
+gap:11px;
+align-items:flex-start;
+}
+
+.icon{
+width:42px;
+height:42px;
+border-radius:12px;
+background:#eaf2ee;
+display:grid;
+place-items:center;
+font-size:1.3rem;
+flex-shrink:0;
+}
+
+.card h3{
+font-size:1rem;
+margin:2px 0 5px;
+}
+
+.category{
+font-size:.8rem;
+color:var(--muted);
+}
+
+.card p{
+font-size:.89rem;
+color:#51625e;
+margin:13px 0;
+}
+
+.open,.status{
+margin-top:auto;
+align-self:flex-start;
+font-size:.78rem;
+font-weight:bold;
+border-radius:20px;
+padding:7px 11px;
+}
+
+.open{
+background:var(--g);
+color:#fff;
+text-decoration:none;
+}
+
+.status{
+color:#755c00;
+background:#fbf4d9;
+}
+
+footer{
+background:#041f1e;
+color:#dbe7e1;
+text-align:center;
+padding:23px 5%;
+font-size:.85rem;
+}
+
+footer strong{
+color:var(--gold);
+}
+
+@media(max-width:850px){
+.test-groups{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.toolbar{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:540px){
+.grid{
+grid-template-columns:1fr;
+}
+
+.card{
+min-height:0;
+}
+
+header{
+align-items:flex-start;
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<div class="brand">CRUSTAR <span>CARE</span></div>
+<div class="tagline">From the first doubt to the entire journey.</div>
+</div>
+
+<a class="back" href="index.html">← Back to Home</a>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="eyebrow">Explore · Understand · Prepare</div>
+
+<h1>Tests &amp; Procedures Library</h1>
+
+<p>
+A comprehensive educational reference covering cancer screening, laboratory investigations, imaging, endoscopy, sampling, biopsies, pathology, molecular and genetic testing, staging investigations and follow-up procedures.
+</p>
+
+<p>
+A listed test is not automatically required for every patient. The appropriate investigations depend on the suspected or confirmed cancer, symptoms, clinical findings, stage, treatment plan and specialist assessment.
+</p>
+</div>
+</section>
+
+<main>
+
+<div class="notice">
+<strong>Medical information notice:</strong>
+This library is for education and preparation, not diagnosis or personalised treatment advice.
+Tests and procedures should be selected, performed and interpreted by qualified healthcare professionals.
+Availability and terminology may vary between countries and healthcare systems.
+</div>
+
+<section class="master-library">
+
+<div class="master-intro">
+<h2>Master Tests &amp; Procedures Library</h2>
+
+<p>
+Cancer diagnosis and evaluation can involve several different types of investigations. This master library organizes the major test and procedure families used across oncology.
+</p>
+
+<p>
+Individual cancer guides will progressively explain which investigations may be relevant to particular cancers, why they may be used, what they generally involve and how results are interpreted.
+</p>
+</div>
+
+<div class="test-groups">
+
+<div class="test-group">
+<h3>1. Clinical Assessment</h3>
+<ul>
+<li>Medical history</li>
+<li>Family history and pedigree</li>
+<li>Physical examination</li>
+<li>Lymph-node examination</li>
+<li>Skin examination</li>
+<li>Breast examination</li>
+<li>Abdominal examination</li>
+<li>Neurological examination</li>
+<li>Pelvic examination</li>
+<li>Rectal examination</li>
+<li>Performance-status assessment</li>
+<li>Symptom assessment</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>2. Cancer Screening</h3>
+<ul>
+<li>Mammography</li>
+<li>Breast tomosynthesis</li>
+<li>Cervical screening</li>
+<li>HPV testing</li>
+<li>Pap cytology</li>
+<li>Colorectal screening</li>
+<li>FIT stool testing</li>
+<li>Stool DNA testing</li>
+<li>Colonoscopy</li>
+<li>Low-dose CT for selected lung-cancer screening populations</li>
+<li>Prostate screening tests</li>
+<li>PSA testing</li>
+<li>Risk-based genetic screening</li>
+<li>High-risk surveillance programmes</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>3. Blood Tests</h3>
+<ul>
+<li>Complete blood count (CBC/FBC)</li>
+<li>Peripheral blood smear</li>
+<li>Reticulocyte count</li>
+<li>Kidney function tests</li>
+<li>Creatinine and eGFR</li>
+<li>Liver function tests</li>
+<li>Electrolytes</li>
+<li>Calcium</li>
+<li>Phosphate</li>
+<li>Magnesium</li>
+<li>Glucose</li>
+<li>HbA1c</li>
+<li>LDH</li>
+<li>CRP</li>
+<li>ESR</li>
+<li>Coagulation profile</li>
+<li>PT/INR</li>
+<li>aPTT</li>
+<li>Fibrinogen</li>
+<li>Thyroid-function tests</li>
+<li>Hormone tests where indicated</li>
+<li>Blood group and antibody screen</li>
+<li>Crossmatching</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>4. Urine &amp; Body-Fluid Tests</h3>
+<ul>
+<li>Urinalysis</li>
+<li>Urine microscopy</li>
+<li>Urine culture</li>
+<li>Urine cytology</li>
+<li>24-hour urine testing</li>
+<li>Urine protein electrophoresis</li>
+<li>Urine immunofixation</li>
+<li>Pleural-fluid analysis</li>
+<li>Pleural-fluid cytology</li>
+<li>Ascitic-fluid analysis</li>
+<li>Ascitic-fluid cytology</li>
+<li>Cerebrospinal-fluid analysis</li>
+<li>CSF cytology</li>
+<li>Pericardial-fluid analysis</li>
+<li>Other body-fluid cytology</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>5. X-Ray &amp; Radiography</h3>
+<ul>
+<li>Chest X-ray</li>
+<li>Bone X-rays</li>
+<li>Abdominal X-ray</li>
+<li>Skull X-ray</li>
+<li>Spine X-rays</li>
+<li>Dental and jaw radiography</li>
+<li>Mammography</li>
+<li>Digital mammography</li>
+<li>Breast tomosynthesis</li>
+<li>Fluoroscopy</li>
+<li>Contrast radiography</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>6. Ultrasound</h3>
+<ul>
+<li>General ultrasound</li>
+<li>Abdominal ultrasound</li>
+<li>Pelvic ultrasound</li>
+<li>Breast ultrasound</li>
+<li>Thyroid ultrasound</li>
+<li>Testicular ultrasound</li>
+<li>Renal ultrasound</li>
+<li>Transvaginal ultrasound</li>
+<li>Transrectal ultrasound</li>
+<li>Doppler ultrasound</li>
+<li>Vascular ultrasound</li>
+<li>Contrast-enhanced ultrasound</li>
+<li>Ultrasound-guided biopsy</li>
+<li>Endoscopic ultrasound</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>7. CT Scans</h3>
+<ul>
+<li>CT head/brain</li>
+<li>CT neck</li>
+<li>CT chest</li>
+<li>CT abdomen</li>
+<li>CT pelvis</li>
+<li>CT chest-abdomen-pelvis</li>
+<li>Contrast-enhanced CT</li>
+<li>Multiphase CT</li>
+<li>CT angiography</li>
+<li>High-resolution CT</li>
+<li>Low-dose CT</li>
+<li>CT colonography</li>
+<li>CT enterography</li>
+<li>CT-guided biopsy</li>
+<li>CT-guided drainage procedures</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>8. MRI</h3>
+<ul>
+<li>Brain MRI</li>
+<li>Spine MRI</li>
+<li>Head and neck MRI</li>
+<li>Chest MRI</li>
+<li>Abdominal MRI</li>
+<li>Pelvic MRI</li>
+<li>Breast MRI</li>
+<li>Prostate MRI</li>
+<li>MR angiography</li>
+<li>MR venography</li>
+<li>Diffusion-weighted MRI</li>
+<li>Dynamic contrast MRI</li>
+<li>Functional MRI where indicated</li>
+<li>MRI-guided procedures</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>9. Nuclear Medicine &amp; PET</h3>
+<ul>
+<li>PET scan</li>
+<li>PET-CT</li>
+<li>PET-MRI</li>
+<li>Bone scan</li>
+<li>SPECT</li>
+<li>SPECT-CT</li>
+<li>Thyroid uptake scan</li>
+<li>Renal nuclear scans</li>
+<li>Hepatobiliary nuclear scans</li>
+<li>Other cancer-specific nuclear imaging</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>10. Endoscopy</h3>
+<ul>
+<li>Upper GI endoscopy/gastroscopy</li>
+<li>Colonoscopy</li>
+<li>Flexible sigmoidoscopy</li>
+<li>Proctoscopy</li>
+<li>Bronchoscopy</li>
+<li>EBUS</li>
+<li>Cystoscopy</li>
+<li>Ureteroscopy</li>
+<li>Hysteroscopy</li>
+<li>Colposcopy</li>
+<li>Laryngoscopy</li>
+<li>Nasopharyngoscopy</li>
+<li>Capsule endoscopy</li>
+<li>ERCP</li>
+<li>Endoscopic ultrasound</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>11. Cytology &amp; Needle Sampling</h3>
+<ul>
+<li>Fine-needle aspiration (FNA/FNAC)</li>
+<li>Core needle sampling</li>
+<li>Brush cytology</li>
+<li>Washings</li>
+<li>Lavage samples</li>
+<li>Sputum cytology</li>
+<li>Urine cytology</li>
+<li>Pleural-fluid cytology</li>
+<li>Ascitic-fluid cytology</li>
+<li>CSF cytology</li>
+<li>Pericardial-fluid cytology</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>12. Biopsy Procedures</h3>
+<ul>
+<li>Needle biopsy</li>
+<li>Core needle biopsy</li>
+<li>Incisional biopsy</li>
+<li>Excisional biopsy</li>
+<li>Punch biopsy</li>
+<li>Shave biopsy</li>
+<li>Endoscopic biopsy</li>
+<li>Bronchoscopic biopsy</li>
+<li>Lymph-node biopsy</li>
+<li>Sentinel-node biopsy</li>
+<li>Bone biopsy</li>
+<li>Bone-marrow biopsy</li>
+<li>Metastatic-site biopsy</li>
+<li>Surgical specimen biopsy/pathology</li>
+<li>Image-guided biopsy</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>13. Pathology</h3>
+<ul>
+<li>Histopathology</li>
+<li>Cytopathology</li>
+<li>Frozen-section examination</li>
+<li>Immunohistochemistry (IHC)</li>
+<li>Special stains</li>
+<li>Flow cytometry</li>
+<li>Tumour typing</li>
+<li>Tumour grading</li>
+<li>Surgical-margin assessment</li>
+<li>Lymph-node assessment</li>
+<li>Lymphovascular invasion assessment</li>
+<li>Perineural invasion assessment</li>
+<li>Pathology second opinion</li>
+<li>Expert pathology review</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>14. Molecular &amp; Biomarker Testing</h3>
+<ul>
+<li>Single-gene testing</li>
+<li>Multigene panels</li>
+<li>DNA sequencing</li>
+<li>RNA sequencing</li>
+<li>Fusion testing</li>
+<li>PCR testing</li>
+<li>FISH testing</li>
+<li>Gene amplification testing</li>
+<li>Copy-number analysis</li>
+<li>Microsatellite instability (MSI)</li>
+<li>Mismatch-repair (MMR) testing</li>
+<li>Tumour mutational burden (TMB)</li>
+<li>PD-L1 testing</li>
+<li>Gene-expression testing</li>
+<li>Whole-exome sequencing</li>
+<li>Whole-genome sequencing</li>
+<li>Liquid biopsy</li>
+<li>Circulating tumour DNA (ctDNA)</li>
+<li>Circulating tumour cells</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>15. Inherited Cancer Genetic Testing</h3>
+<ul>
+<li>Genetic counselling</li>
+<li>Family-history assessment</li>
+<li>Pedigree analysis</li>
+<li>Germline testing</li>
+<li>Inherited cancer gene panels</li>
+<li>Single-gene germline testing</li>
+<li>Deletion/duplication testing</li>
+<li>Chromosomal testing</li>
+<li>Family/cascade testing</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>16. Blood-Cancer Investigations</h3>
+<ul>
+<li>Peripheral blood smear</li>
+<li>Bone-marrow aspiration</li>
+<li>Bone-marrow biopsy</li>
+<li>Flow cytometry</li>
+<li>Immunophenotyping</li>
+<li>Karyotyping</li>
+<li>Cytogenetics</li>
+<li>FISH</li>
+<li>Molecular testing</li>
+<li>SPEP</li>
+<li>Serum immunofixation</li>
+<li>Serum free light chains</li>
+<li>Urine electrophoresis</li>
+<li>Urine immunofixation</li>
+<li>CSF testing where indicated</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>17. Cancer Staging Investigations</h3>
+<ul>
+<li>CT staging scans</li>
+<li>MRI staging scans</li>
+<li>PET-CT</li>
+<li>PET-MRI</li>
+<li>Bone scan</li>
+<li>Brain imaging</li>
+<li>Chest imaging</li>
+<li>Abdominal imaging</li>
+<li>Pelvic imaging</li>
+<li>Lymph-node assessment</li>
+<li>Bone-marrow assessment when indicated</li>
+<li>Metastatic-site biopsy</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>18. Pre-Procedure Investigations</h3>
+<ul>
+<li>Complete blood count</li>
+<li>Kidney-function testing</li>
+<li>Liver-function testing</li>
+<li>Electrolytes</li>
+<li>Coagulation testing</li>
+<li>Blood group and crossmatch</li>
+<li>ECG</li>
+<li>Echocardiogram</li>
+<li>Chest imaging</li>
+<li>Pregnancy testing when relevant</li>
+<li>Infection screening when indicated</li>
+<li>Anaesthetic assessment</li>
+<li>Pulmonary-function testing when required</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>19. Treatment-Response Monitoring</h3>
+<ul>
+<li>Repeat blood counts</li>
+<li>Kidney-function monitoring</li>
+<li>Liver-function monitoring</li>
+<li>Electrolyte monitoring</li>
+<li>Repeat CT</li>
+<li>Repeat MRI</li>
+<li>Repeat PET/CT</li>
+<li>Repeat ultrasound</li>
+<li>Repeat tumour-marker testing when clinically useful</li>
+<li>Repeat molecular testing when indicated</li>
+<li>Circulating tumour DNA monitoring in selected settings</li>
+<li>Organ-function monitoring</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>20. Recurrence &amp; Follow-Up</h3>
+<ul>
+<li>Clinical follow-up examination</li>
+<li>Surveillance imaging</li>
+<li>Blood tests</li>
+<li>Tumour-marker testing where appropriate</li>
+<li>Repeat biopsy of suspicious lesions</li>
+<li>Repeat pathology</li>
+<li>Repeat molecular profiling</li>
+<li>CT surveillance</li>
+<li>MRI surveillance</li>
+<li>PET imaging when indicated</li>
+<li>Endoscopic surveillance where appropriate</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>21. Specialist &amp; Advanced Procedures</h3>
+<ul>
+<li>Mediastinoscopy</li>
+<li>Thoracoscopy/VATS</li>
+<li>Thoracentesis</li>
+<li>Paracentesis</li>
+<li>Lumbar puncture</li>
+<li>Central-line related imaging/procedures</li>
+<li>Image-guided drainage</li>
+<li>Image-guided ablation assessment</li>
+<li>Sentinel lymph-node mapping</li>
+<li>Intraoperative pathology</li>
+<li>Specialist interventional radiology procedures</li>
+</ul>
+</div>
+
+<div class="test-group">
+<h3>22. Tumour Markers</h3>
+<ul>
+<li>AFP</li>
+<li>CA 19-9</li>
+<li>CA-125</li>
+<li>CA 15-3</li>
+<li>CEA</li>
+<li>PSA</li>
+<li>Calcitonin</li>
+<li>Thyroglobulin</li>
+<li>Beta-hCG</li>
+<li>LDH</li>
+<li>Chromogranin A</li>
+<li>5-HIAA</li>
+<li>Other cancer-specific biomarkers</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<div class="row">
+<h2>Browse by Cancer</h2>
+<div class="count" id="count"></div>
+</div>
+
+<div class="toolbar">
+<input id="search" type="search" placeholder="Search cancer e.g. lung, breast, lymphoma">
+
+<select id="category">
+<option value="">All body systems</option>
+</select>
+</div>
+
+<div class="grid" id="grid"></div>
+
+</main>
+
+<footer>
+<strong>CRUSTAR CARE</strong> · In Memory of Er. Abdul Hai Khan<br>
+Educational resource project · Medical content and translations will be reviewed before publication.
+</footer>
+
+<script>
+
+const cancers=[
+
+["Lung cancer","Lungs & chest","🫁",""],
+["Non-small cell lung cancer","Lungs & chest","🫁",""],
+["Small cell lung cancer","Lungs & chest","🫁",""],
+["Mesothelioma","Lungs & chest","🫁",""],
+["Thymoma and thymic carcinoma","Lungs & chest","🫁",""],
+
+["Breast cancer","Breast","🎗️",""],
+["Male breast cancer","Breast","🎗️",""],
+["Ductal carcinoma in situ (DCIS)","Breast","🎗️",""],
+
+["Hodgkin lymphoma","Blood & lymphatic","🩸",""],
+["Non-Hodgkin lymphoma","Blood & lymphatic","🩸",""],
+["Diffuse large B-cell lymphoma (DLBCL)","Blood & lymphatic","🩸",""],
+["Burkitt lymphoma","Blood & lymphatic","🩸",""],
+["Primary CNS lymphoma","Blood & lymphatic","🩸",""],
+["Leukaemia","Blood & lymphatic","🩸",""],
+["Acute lymphoblastic leukaemia (ALL)","Blood & lymphatic","🩸",""],
+["Acute myeloid leukaemia (AML)","Blood & lymphatic","🩸",""],
+["Chronic lymphocytic leukaemia (CLL)","Blood & lymphatic","🩸",""],
+["Chronic myeloid leukaemia (CML)","Blood & lymphatic","🩸",""],
+["Multiple myeloma","Blood & lymphatic","🩸",""],
+["Myelodysplastic syndromes","Blood & lymphatic","🩸",""],
+["Myeloproliferative neoplasms","Blood & lymphatic","🩸",""],
+
+["Brain tumours","Brain & nervous system","🧠",""],
+["Glioma","Brain & nervous system","🧠",""],
+["Astrocytoma","Brain & nervous system","🧠",""],
+["Glioblastoma","Brain & nervous system","🧠",""],
+["Meningioma","Brain & nervous system","🧠",""],
+["Medulloblastoma","Brain & nervous system","🧠",""],
+["Spinal cord tumours","Brain & nervous system","🧠",""],
+
+["Oral cancer","Head & neck","👄",""],
+["Mouth cancer","Head & neck","👄",""],
+["Tongue cancer","Head & neck","👅",""],
+["Throat cancer","Head & neck","🗣️",""],
+["Laryngeal cancer","Head & neck","🗣️",""],
+["Nasopharyngeal cancer","Head & neck","👃",""],
+["Oropharyngeal cancer","Head & neck","🗣️",""],
+["Salivary gland cancer","Head & neck","💧",""],
+["Thyroid cancer","Endocrine","🦋",""],
+
+["Oesophageal cancer","Digestive system","🫃",""],
+["Stomach cancer","Digestive system","🫃",""],
+["Gastric cancer","Digestive system","🫃",""],
+["Liver cancer","Digestive system","🫀",""],
+["Hepatocellular carcinoma","Digestive system","🫀",""],
+["Bile duct cancer","Digestive system","🫃",""],
+["Gallbladder cancer","Digestive system","🫃",""],
+["Pancreatic cancer","Digestive system","🫃",""],
+["Colorectal cancer","Digestive system","🫃",""],
+["Colon cancer","Digestive system","🫃",""],
+["Rectal cancer","Digestive system","🫃",""],
+["Anal cancer","Digestive system","🫃",""],
+["Small intestine cancer","Digestive system","🫃",""],
+["Appendix cancer","Digestive system","🫃",""],
+["Gastrointestinal stromal tumour (GIST)","Digestive system","🫃",""],
+
+["Kidney cancer","Urinary system","🫘",""],
+["Bladder cancer","Urinary system","🫧",""],
+["Ureter cancer","Urinary system","🫘",""],
+["Renal pelvis cancer","Urinary system","🫘",""],
+
+["Prostate cancer","Reproductive system","♂️",""],
+["Testicular cancer","Reproductive system","♂️",""],
+["Penile cancer","Reproductive system","♂️",""],
+["Ovarian cancer","Reproductive system","♀️",""],
+["Cervical cancer","Reproductive system","♀️",""],
+["Endometrial cancer","Reproductive system","♀️",""],
+["Uterine cancer","Reproductive system","♀️",""],
+["Vaginal cancer","Reproductive system","♀️",""],
+["Vulvar cancer","Reproductive system","♀️",""],
+
+["Bone cancer","Bone & soft tissue","🦴",""],
+["Soft tissue sarcoma","Bone & soft tissue","🦴",""],
+["Osteosarcoma","Bone & soft tissue","🦴",""],
+["Ewing sarcoma","Bone & soft tissue","🦴",""],
+
+["Melanoma","Skin","🧴",""],
+["Non-melanoma skin cancer","Skin","🧴",""],
+["Basal cell carcinoma","Skin","🧴",""],
+["Squamous cell skin cancer","Skin","🧴",""],
+
+["Adrenal cancer","Endocrine","🧬",""],
+["Neuroendocrine tumours","Endocrine","🧬",""],
+
+["Eye cancer","Eye","👁️",""],
+["Retinoblastoma","Eye","👁️",""],
+
+["Nasopharyngeal carcinoma","Head & neck","👃",""],
+["Sinonasal cancer","Head & neck","👃",""],
+
+["Childhood cancers","Childhood cancers","🧒",""],
+["Wilms tumour","Childhood cancers","🧒",""],
+["Childhood leukaemia","Childhood cancers","🧒",""],
+["Childhood brain and CNS tumours","Childhood cancers","🧒",""],
+["Childhood bone and soft tissue cancers","Childhood cancers","🧒",""],
+["Childhood germ cell tumours","Childhood cancers","🧒",""],
+["Rare childhood cancers","Childhood cancers","🧒",""],
+
+["Carcinoma of unknown primary","Other cancer topics","🔎",""],
+["Metastatic cancer","Other cancer topics","🔎",""],
+["Recurrent cancer","Other cancer topics","🔎",""],
+["Cancer during pregnancy","Other cancer topics","🔎",""],
+["AIDS-related cancers","Other cancer topics","🔎",""],
+["Rare cancers","Other cancer topics","🔎",""]
+
+];
+
+const search=document.getElementById("search");
+const category=document.getElementById("category");
+const grid=document.getElementById("grid");
+const count=document.getElementById("count");
+
+[...new Set(cancers.map(c=>c[1]))]
+.sort()
+.forEach(c=>{
+const option=document.createElement("option");
+option.value=c;
+option.textContent=c;
+category.appendChild(option);
+});
+
+function render(){
+
+const q=search.value.trim().toLowerCase();
+const cat=category.value;
+
+const list=cancers.filter(c=>
+c[0].toLowerCase().includes(q)&&
+(!cat||c[1]===cat)
+);
+
+grid.innerHTML=list.map(c=>{
+
+const link=
+c[3]
+?`<a class="open" href="${c[3]}">Open guide →</a>`
+:c[0]==="Lung cancer"
+?`<a class="open" href="lung-cancer.html">Open guide →</a>`
+:`<span class="status">Guide in development</span>`;
+
+return `
+<article class="card">
+
+<div class="cardtop">
+
+<div class="icon">${c[2]}</div>
+
+<div>
+<h3>${c[0]}</h3>
+<div class="category">${c[1]}</div>
+</div>
+
+</div>
+
+<p>
+Explore tests, scans, laboratory investigations, biopsies and procedures that may be relevant to this cancer.
+</p>
+
+${link}
+
+</article>
+`;
+
+}).join("");
+
+count.textContent=`Showing ${list.length} of ${cancers.length} cancers`;
+
+}
+
+search.addEventListener("input",render);
+category.addEventListener("change",render);
+
+render();
+
+</script>
+
+</body>
+</html>
